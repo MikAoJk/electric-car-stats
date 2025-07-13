@@ -5,7 +5,8 @@
     "year": 2024,
     "range_km": 430,
     "price_usd": 40000,
-    "trunk_space_liters": 425
+    "trunk_space_liters": 425,
+    "horse_power": 283
   },
   {
     "make": "Nissan",
@@ -13,7 +14,8 @@
     "year": 2023,
     "range_km": 270,
     "price_usd": 32000,
-    "trunk_space_liters": 420
+    "trunk_space_liters": 420,
+    "horse_power": 147
   },
   {
     "make": "Hyundai",
@@ -21,7 +23,8 @@
     "year": 2024,
     "range_km": 484,
     "price_usd": 42000,
-    "trunk_space_liters": 466
+    "trunk_space_liters": 466,
+    "horse_power": 201
   },
   {
     "make": "Volkswagen",
@@ -29,7 +32,8 @@
     "year": 2024,
     "range_km": 520,
     "price_usd": 45000,
-    "trunk_space_liters": 543
+    "trunk_space_liters": 543,
+    "horse_power": 201
   },
   {
     "make": "BMW",
@@ -37,7 +41,8 @@
     "year": 2023,
     "range_km": 460,
     "price_usd": 55000,
-    "trunk_space_liters": 510
+    "trunk_space_liters": 510,
+    "horse_power": 286
   },
   {
     "make": "Audi",
@@ -45,7 +50,8 @@
     "year": 2024,
     "range_km": 436,
     "price_usd": 75000,
-    "trunk_space_liters": 660
+    "trunk_space_liters": 660,
+    "horse_power": 355
   },
   {
     "make": "Mercedes",
@@ -53,7 +59,8 @@
     "year": 2024,
     "range_km": 770,
     "price_usd": 105000,
-    "trunk_space_liters": 610
+    "trunk_space_liters": 610,
+    "horse_power": 329
   },
   {
     "make": "Ford",
@@ -61,7 +68,8 @@
     "year": 2023,
     "range_km": 491,
     "price_usd": 48000,
-    "trunk_space_liters": 402
+    "trunk_space_liters": 402,
+    "horse_power": 266
   },
   {
     "make": "Lucid",
@@ -69,7 +77,8 @@
     "year": 2024,
     "range_km": 832,
     "price_usd": 89000,
-    "trunk_space_liters": 627
+    "trunk_space_liters": 627,
+    "horse_power": 480
   },
   {
     "make": "Rivian",
@@ -77,7 +86,8 @@
     "year": 2023,
     "range_km": 505,
     "price_usd": 75000,
-    "trunk_space_liters": 828
+    "trunk_space_liters": 828,
+    "horse_power": 835
   },
   {
     "make": "Polestar",
@@ -85,7 +95,8 @@
     "year": 2024,
     "range_km": 540,
     "price_usd": 50000,
-    "trunk_space_liters": 405
+    "trunk_space_liters": 405,
+    "horse_power": 231
   },
   {
     "make": "Genesis",
@@ -93,7 +104,8 @@
     "year": 2023,
     "range_km": 400,
     "price_usd": 60000,
-    "trunk_space_liters": 432
+    "trunk_space_liters": 432,
+    "horse_power": 314
   },
   {
     "make": "Kia",
@@ -101,7 +113,8 @@
     "year": 2024,
     "range_km": 528,
     "price_usd": 42000,
-    "trunk_space_liters": 490
+    "trunk_space_liters": 490,
+    "horse_power": 225
   },
   {
     "make": "BYD",
@@ -109,7 +122,8 @@
     "year": 2022,
     "range_km": 505,
     "price_usd": 47000,
-    "trunk_space_liters": 940
+    "trunk_space_liters": 940,
+    "horse_power": 509
   },
   {
   "make": "Skoda",
@@ -117,6 +131,7 @@
   "year": 2024,
   "range_km": 530,
   "price_usd": 45000,
-  "trunk_space_liters": 585
+  "trunk_space_liters": 585,
+  "horse_power": 201
   }
 ]
