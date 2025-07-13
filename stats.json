@@ -7,7 +7,7 @@
     "price_usd": 40000,
     "trunk_space_liters": 425,
     "horse_power": 283,
-    "image_url": "https://www.tesla.com/sites/default/files/modelsx-new/social/model-3-hero-social.jpg"
+    "image_url": "img/tesla-model-3.jpg"
   },
   {
     "make": "Tesla",
@@ -17,7 +17,7 @@
     "price_usd": 47990,
     "trunk_space_liters": 854,
     "horse_power": 384,
-    "image_url": "https://www.tesla.com/sites/default/files/modelsx-new/social/model-y-hero-social.jpg"
+    "image_url": "img/tesla-model-y.jpg"
   },
   {
     "make": "Nissan",
@@ -27,7 +27,7 @@
     "price_usd": 32000,
     "trunk_space_liters": 420,
     "horse_power": 147,
-    "image_url": "https://www.nissanusa.com/content/dam/Nissan/us/vehicles/leaf/2023/overview/2023-nissan-leaf-ev-exterior-front-side-profile.jpg"
+    "image_url": "img/nissan-leaf.jpg"
   },
   {
     "make": "Hyundai",
@@ -37,7 +37,7 @@
     "price_usd": 42000,
     "trunk_space_liters": 466,
     "horse_power": 201,
-    "image_url": "https://www.hyundainews.com/en-us/releases/3206/images/2024-Hyundai-KONA-Electric-002.jpg"
+    "image_url": "img/hyundai-kona-electric.jpg"
   },
   {
     "make": "Volkswagen",
@@ -47,7 +47,7 @@
     "price_usd": 45000,
     "trunk_space_liters": 543,
     "horse_power": 201,
-    "image_url": "https://media.vw.com/assets/images/38425/ID.4_2024_hero.jpg"
+    "image_url": "img/volkswagen-id.4.jpg"
   },
   {
     "make": "BMW",
@@ -57,7 +57,7 @@
     "price_usd": 55000,
     "trunk_space_liters": 510,
     "horse_power": 286,
-    "image_url": "https://www.press.bmwgroup.com/photo/detail/P90289321/high-voltage-battery-bmw-ix3-07-2019"
+    "image_url": "img/bmw-ix3.jpg"
   },
   {
     "make": "Audi",
@@ -67,7 +67,7 @@
     "price_usd": 75000,
     "trunk_space_liters": 660,
     "horse_power": 355,
-    "image_url": "https://www.audi-mediacenter.com/-/media/amc/images/models/e-tron/e-tron/my-2024/1920x1080_desktop_teaser_audi_etron_2024.jpg"
+    "image_url": "img/audi-e-tron.jpg"
   },
   {
     "make": "Mercedes",
@@ -77,7 +77,7 @@
     "price_usd": 105000,
     "trunk_space_liters": 610,
     "horse_power": 329,
-    "image_url": "https://media.daimler.com/marsMediaSite/en/instance/ko/2024-EQS-Sedan.xhtml?oid=55645944"
+    "image_url": "img/mercedes-eqs.jpg"
   },
   {
     "make": "Ford",
@@ -87,7 +87,7 @@
     "price_usd": 48000,
     "trunk_space_liters": 402,
     "horse_power": 266,
-    "image_url": "https://media.ford.com/content/dam/brand_ford/en_us/brand/resources/general/new-vehicles/mach-e/2023/ford-mustang-mach-e-2023-gallery-1.jpg"
+    "image_url": "img/ford-mustang-mach-e.jpg"
   },
   {
     "make": "Lucid",
@@ -97,7 +97,7 @@
     "price_usd": 89000,
     "trunk_space_liters": 627,
     "horse_power": 480,
-    "image_url": "https://media.lucidmotors.com/2024-lucid-air-hero.jpg"
+    "image_url": "img/lucid-air.jpg"
   },
   {
     "make": "Rivian",
@@ -107,7 +107,7 @@
     "price_usd": 75000,
     "trunk_space_liters": 828,
     "horse_power": 835,
-    "image_url": "https://rivian.com/assets/images/r1t/explore/gallery/2023_R1T_Exterior_01.jpg"
+    "image_url": "img/rivian-r1t.jpg"
   },
   {
     "make": "Polestar",
@@ -117,7 +117,7 @@
     "price_usd": 50000,
     "trunk_space_liters": 405,
     "horse_power": 231,
-    "image_url": "https://www.polestar.com/contentassets/5c6c70e4a8b545d3a9c7e32ab4c9bba8/polestar-2-2024-hero.jpg"
+    "image_url": "img/polestar-2.jpg"
   },
   {
     "make": "Genesis",
@@ -127,7 +127,7 @@
     "price_usd": 60000,
     "trunk_space_liters": 432,
     "horse_power": 314,
-    "image_url": "https://www.genesis.com/content/dam/genesis-p2/us/assets/vehicles/gv60/2023/visualizer/2023-genesis-gv60-performance-hero.png"
+    "image_url": "img/genesis-gv60.jpg"
   },
   {
     "make": "Kia",
@@ -137,7 +137,7 @@
     "price_usd": 42000,
     "trunk_space_liters": 490,
     "horse_power": 225,
-    "image_url": "https://press.kia.com/content/dam/kwcms/kme/global/en/images/vehicles/ev6/my24/kia-ev6-my24-hero.jpg"
+    "image_url": "img/kia-ev6.jpg"
   },
   {
     "make": "BYD",
@@ -147,7 +147,7 @@
     "price_usd": 47000,
     "trunk_space_liters": 940,
     "horse_power": 509,
-    "image_url": "https://www.byd.com/sites/default/files/2022-07/BYD-Tang-EV-2022.jpg"
+    "image_url": "img/byd-tang.jpg"
   },
   {
     "make": "Skoda",
@@ -157,6 +157,6 @@
     "price_usd": 45000,
     "trunk_space_liters": 585,
     "horse_power": 201,
-    "image_url": "https://cdn.skoda-storyboard.com/2023/10/Skoda-Enyaq-2024-hero.jpg"
+    "image_url": "img/skoda-enyaq.jpg"
   }
 ]
