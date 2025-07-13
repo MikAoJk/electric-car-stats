@@ -15,59 +15,95 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background-color: white;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         h1 {
             color: #333;
             text-align: center;
             margin-bottom: 30px;
+            font-size: 2.5rem;
         }
         
-        .table-container {
-            overflow-x: auto;
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
             margin: 20px 0;
         }
         
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0;
-            font-size: 14px;
+        .car-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 1px solid #e0e0e0;
         }
         
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+        .car-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
         
-        th {
-            background-color: #4CAF50;
+        .car-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .car-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .car-year {
+            background: #4CAF50;
             color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
             font-weight: bold;
-            position: sticky;
-            top: 0;
         }
         
-        tbody tr:hover {
-            background-color: #f5f5f5;
+        .car-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
         }
         
-        tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
+        .spec-item {
+            display: flex;
+            flex-direction: column;
         }
         
-        .price {
+        .spec-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        
+        .spec-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .spec-value.price {
             color: #2e7d32;
-            font-weight: bold;
         }
         
-        .range {
+        .spec-value.range {
             color: #1976d2;
+        }
+        
+        .spec-value.power {
+            color: #d32f2f;
         }
         
         .loading {
@@ -95,26 +131,38 @@
                 padding: 15px;
             }
             
-            table {
-                font-size: 12px;
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
             
-            th, td {
-                padding: 8px;
+            .car-card {
+                padding: 15px;
             }
             
             h1 {
-                font-size: 1.5em;
+                font-size: 2rem;
+            }
+            
+            .car-title {
+                font-size: 1.1rem;
             }
         }
         
         @media (max-width: 480px) {
-            th, td {
-                padding: 6px;
+            .car-specs {
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
             
-            table {
-                font-size: 11px;
+            .car-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -124,22 +172,7 @@
         <h1>Electric Car Stats</h1>
         <div id="loading" class="loading">Loading car data...</div>
         <div id="error" class="error" style="display: none;"></div>
-        <div class="table-container">
-            <table id="carTable" style="display: none;">
-                <thead>
-                    <tr>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Year</th>
-                        <th>Range (km)</th>
-                        <th>Price (USD)</th>
-                        <th>Trunk Space (L)</th>
-                        <th>Horsepower</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                </tbody>
-            </table>
+        <div class="cards-container" id="cardsContainer" style="display: none;">
         </div>
     </div>
 
@@ -163,8 +196,7 @@
         async function loadCarData() {
             const loadingDiv = document.getElementById('loading');
             const errorDiv = document.getElementById('error');
-            const table = document.getElementById('carTable');
-            const tableBody = document.getElementById('tableBody');
+            const cardsContainer = document.getElementById('cardsContainer');
 
             try {
                 // Fetch the stats.json file
@@ -176,29 +208,45 @@
                 
                 const carData = await response.json();
                 
-                // Clear existing table data
-                tableBody.innerHTML = '';
+                // Clear existing cards
+                cardsContainer.innerHTML = '';
                 
-                // Populate table with car data
+                // Create cards for each car
                 carData.forEach(car => {
-                    const row = document.createElement('tr');
+                    const cardElement = document.createElement('div');
+                    cardElement.className = 'car-card';
                     
-                    row.innerHTML = `
-                        <td>${car.make}</td>
-                        <td>${car.model}</td>
-                        <td>${car.year}</td>
-                        <td class="range">${formatNumber(car.range_km)}</td>
-                        <td class="price">${formatCurrency(car.price_usd)}</td>
-                        <td>${formatNumber(car.trunk_space_liters)}</td>
-                        <td>${formatNumber(car.horse_power)}</td>
+                    cardElement.innerHTML = `
+                        <div class="car-header">
+                            <div class="car-title">${car.make} ${car.model}</div>
+                            <div class="car-year">${car.year}</div>
+                        </div>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <div class="spec-label">Range</div>
+                                <div class="spec-value range">${formatNumber(car.range_km)} km</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Price</div>
+                                <div class="spec-value price">${formatCurrency(car.price_usd)}</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Trunk Space</div>
+                                <div class="spec-value">${formatNumber(car.trunk_space_liters)} L</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Horsepower</div>
+                                <div class="spec-value power">${formatNumber(car.horse_power)} HP</div>
+                            </div>
+                        </div>
                     `;
                     
-                    tableBody.appendChild(row);
+                    cardsContainer.appendChild(cardElement);
                 });
                 
-                // Hide loading, show table
+                // Hide loading, show cards
                 loadingDiv.style.display = 'none';
-                table.style.display = 'table';
+                cardsContainer.style.display = 'grid';
                 
             } catch (error) {
                 console.error('Error loading car data:', error);
