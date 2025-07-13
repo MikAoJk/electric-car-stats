@@ -6,7 +6,8 @@
     "range_km": 430,
     "price_usd": 40000,
     "trunk_space_liters": 425,
-    "horse_power": 283
+    "horse_power": 283,
+    "image_url": "https://picsum.photos/400/300?random=1"
   },
   {
     "make": "Tesla",
@@ -15,7 +16,8 @@
     "range_km": 533,
     "price_usd": 47990,
     "trunk_space_liters": 854,
-    "horse_power": 384
+    "horse_power": 384,
+    "image_url": "https://picsum.photos/400/300?random=2"
   },
   {
     "make": "Nissan",
@@ -24,7 +26,8 @@
     "range_km": 270,
     "price_usd": 32000,
     "trunk_space_liters": 420,
-    "horse_power": 147
+    "horse_power": 147,
+    "image_url": "https://picsum.photos/400/300?random=3"
   },
   {
     "make": "Hyundai",
@@ -33,7 +36,8 @@
     "range_km": 484,
     "price_usd": 42000,
     "trunk_space_liters": 466,
-    "horse_power": 201
+    "horse_power": 201,
+    "image_url": "https://broken-url-test.example.com/image.jpg"
   },
   {
     "make": "Volkswagen",
@@ -51,7 +55,8 @@
     "range_km": 460,
     "price_usd": 55000,
     "trunk_space_liters": 510,
-    "horse_power": 286
+    "horse_power": 286,
+    "image_url": "https://picsum.photos/400/300?random=4"
   },
   {
     "make": "Audi",
