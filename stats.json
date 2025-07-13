@@ -7,7 +7,7 @@
     "price_usd": 40000,
     "trunk_space_liters": 425,
     "horse_power": 283,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23E5E7EB'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23374151' text-anchor='middle' dominant-baseline='middle'%3ETesla Model 3%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.tesla.com/sites/default/files/modelsx-new/social/model-3-hero-social.jpg"
   },
   {
     "make": "Tesla",
@@ -17,7 +17,7 @@
     "price_usd": 47990,
     "trunk_space_liters": 854,
     "horse_power": 384,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23DC2626'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ETesla Model Y%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.tesla.com/sites/default/files/modelsx-new/social/model-y-hero-social.jpg"
   },
   {
     "make": "Nissan",
@@ -27,7 +27,7 @@
     "price_usd": 32000,
     "trunk_space_liters": 420,
     "horse_power": 147,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23B91C1C'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ENissan Leaf%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.nissanusa.com/content/dam/Nissan/us/vehicles/leaf/2023/overview/2023-nissan-leaf-ev-exterior-front-side-profile.jpg"
   },
   {
     "make": "Hyundai",
@@ -37,7 +37,7 @@
     "price_usd": 42000,
     "trunk_space_liters": 466,
     "horse_power": 201,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23059669'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='14' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EHyundai Kona Electric%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.hyundainews.com/en-us/releases/3206/images/2024-Hyundai-KONA-Electric-002.jpg"
   },
   {
     "make": "Volkswagen",
@@ -47,7 +47,7 @@
     "price_usd": 45000,
     "trunk_space_liters": 543,
     "horse_power": 201,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23D946EF'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EVolkswagen ID.4%3C/text%3E%3C/svg%3E"
+    "image_url": "https://media.vw.com/assets/images/38425/ID.4_2024_hero.jpg"
   },
   {
     "make": "BMW",
@@ -57,7 +57,7 @@
     "price_usd": 55000,
     "trunk_space_liters": 510,
     "horse_power": 286,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23334155'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EBMW iX3%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.press.bmwgroup.com/photo/detail/P90289321/high-voltage-battery-bmw-ix3-07-2019"
   },
   {
     "make": "Audi",
@@ -67,7 +67,7 @@
     "price_usd": 75000,
     "trunk_space_liters": 660,
     "horse_power": 355,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23B45309'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EAudi e-tron%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.audi-mediacenter.com/-/media/amc/images/models/e-tron/e-tron/my-2024/1920x1080_desktop_teaser_audi_etron_2024.jpg"
   },
   {
     "make": "Mercedes",
@@ -77,7 +77,7 @@
     "price_usd": 105000,
     "trunk_space_liters": 610,
     "horse_power": 329,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23374151'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EMercedes EQS%3C/text%3E%3C/svg%3E"
+    "image_url": "https://media.daimler.com/marsMediaSite/en/instance/ko/2024-EQS-Sedan.xhtml?oid=55645944"
   },
   {
     "make": "Ford",
@@ -87,7 +87,7 @@
     "price_usd": 48000,
     "trunk_space_liters": 402,
     "horse_power": 266,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23065F46'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='14' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EFord Mustang Mach-E%3C/text%3E%3C/svg%3E"
+    "image_url": "https://media.ford.com/content/dam/brand_ford/en_us/brand/resources/general/new-vehicles/mach-e/2023/ford-mustang-mach-e-2023-gallery-1.jpg"
   },
   {
     "make": "Lucid",
@@ -97,7 +97,7 @@
     "price_usd": 89000,
     "trunk_space_liters": 627,
     "horse_power": 480,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23581C87'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ELucid Air%3C/text%3E%3C/svg%3E"
+    "image_url": "https://media.lucidmotors.com/2024-lucid-air-hero.jpg"
   },
   {
     "make": "Rivian",
@@ -107,7 +107,7 @@
     "price_usd": 75000,
     "trunk_space_liters": 828,
     "horse_power": 835,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23047857'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ERivian R1T%3C/text%3E%3C/svg%3E"
+    "image_url": "https://rivian.com/assets/images/r1t/explore/gallery/2023_R1T_Exterior_01.jpg"
   },
   {
     "make": "Polestar",
@@ -117,7 +117,7 @@
     "price_usd": 50000,
     "trunk_space_liters": 405,
     "horse_power": 231,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23E11D48'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EPolestar 2%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.polestar.com/contentassets/5c6c70e4a8b545d3a9c7e32ab4c9bba8/polestar-2-2024-hero.jpg"
   },
   {
     "make": "Genesis",
@@ -127,7 +127,7 @@
     "price_usd": 60000,
     "trunk_space_liters": 432,
     "horse_power": 314,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23991B1B'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EGenesis GV60%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.genesis.com/content/dam/genesis-p2/us/assets/vehicles/gv60/2023/visualizer/2023-genesis-gv60-performance-hero.png"
   },
   {
     "make": "Kia",
@@ -137,7 +137,7 @@
     "price_usd": 42000,
     "trunk_space_liters": 490,
     "horse_power": 225,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23DC2626'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EKia EV6%3C/text%3E%3C/svg%3E"
+    "image_url": "https://press.kia.com/content/dam/kwcms/kme/global/en/images/vehicles/ev6/my24/kia-ev6-my24-hero.jpg"
   },
   {
     "make": "BYD",
@@ -147,7 +147,7 @@
     "price_usd": 47000,
     "trunk_space_liters": 940,
     "horse_power": 509,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23C2410C'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EBYD Tang%3C/text%3E%3C/svg%3E"
+    "image_url": "https://www.byd.com/sites/default/files/2022-07/BYD-Tang-EV-2022.jpg"
   },
   {
     "make": "Skoda",
@@ -157,6 +157,6 @@
     "price_usd": 45000,
     "trunk_space_liters": 585,
     "horse_power": 201,
-    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23059669'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ESkoda Enyaq%3C/text%3E%3C/svg%3E"
+    "image_url": "https://cdn.skoda-storyboard.com/2023/10/Skoda-Enyaq-2024-hero.jpg"
   }
 ]
