@@ -9,6 +9,15 @@
     "horse_power": 283
   },
   {
+    "make": "Tesla",
+    "model": "Model Y",
+    "year": 2024,
+    "range_km": 533,
+    "price_usd": 47990,
+    "trunk_space_liters": 854,
+    "horse_power": 384
+  },
+  {
     "make": "Nissan",
     "model": "Leaf",
     "year": 2023,
