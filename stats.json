@@ -5,6 +5,7 @@
     "year": 2024,
     "range_km": 430,
     "price_usd": 40000,
+    "price_nok": 420000,
     "trunk_space_liters": 425,
     "horse_power": 283,
     "image_url": "img/tesla-model-3.jpg"
@@ -15,6 +16,7 @@
     "year": 2024,
     "range_km": 533,
     "price_usd": 47990,
+    "price_nok": 503895,
     "trunk_space_liters": 854,
     "horse_power": 384,
     "image_url": "img/tesla-model-y.jpg"
@@ -25,6 +27,7 @@
     "year": 2023,
     "range_km": 270,
     "price_usd": 32000,
+    "price_nok": 336000,
     "trunk_space_liters": 420,
     "horse_power": 147,
     "image_url": "img/nissan-leaf.jpg"
@@ -35,6 +38,7 @@
     "year": 2024,
     "range_km": 484,
     "price_usd": 42000,
+    "price_nok": 441000,
     "trunk_space_liters": 466,
     "horse_power": 201,
     "image_url": "img/hyundai-kona-electric.jpg"
@@ -45,6 +49,7 @@
     "year": 2024,
     "range_km": 520,
     "price_usd": 45000,
+    "price_nok": 472500,
     "trunk_space_liters": 543,
     "horse_power": 201,
     "image_url": "img/volkswagen-id.4.jpg"
@@ -55,6 +60,7 @@
     "year": 2023,
     "range_km": 460,
     "price_usd": 55000,
+    "price_nok": 577500,
     "trunk_space_liters": 510,
     "horse_power": 286,
     "image_url": "img/bmw-ix3.jpg"
@@ -65,6 +71,7 @@
     "year": 2024,
     "range_km": 436,
     "price_usd": 75000,
+    "price_nok": 787500,
     "trunk_space_liters": 660,
     "horse_power": 355,
     "image_url": "img/audi-e-tron.jpg"
@@ -75,6 +82,7 @@
     "year": 2024,
     "range_km": 770,
     "price_usd": 105000,
+    "price_nok": 1102500,
     "trunk_space_liters": 610,
     "horse_power": 329,
     "image_url": "img/mercedes-eqs.jpg"
@@ -85,6 +93,7 @@
     "year": 2023,
     "range_km": 491,
     "price_usd": 48000,
+    "price_nok": 504000,
     "trunk_space_liters": 402,
     "horse_power": 266,
     "image_url": "img/ford-mustang-mach-e.jpg"
@@ -95,6 +104,7 @@
     "year": 2024,
     "range_km": 832,
     "price_usd": 89000,
+    "price_nok": 934500,
     "trunk_space_liters": 627,
     "horse_power": 480,
     "image_url": "img/lucid-air.jpg"
@@ -105,6 +115,7 @@
     "year": 2023,
     "range_km": 505,
     "price_usd": 75000,
+    "price_nok": 787500,
     "trunk_space_liters": 828,
     "horse_power": 835,
     "image_url": "img/rivian-r1t.jpg"
@@ -115,6 +126,7 @@
     "year": 2024,
     "range_km": 540,
     "price_usd": 50000,
+    "price_nok": 525000,
     "trunk_space_liters": 405,
     "horse_power": 231,
     "image_url": "img/polestar-2.jpg"
@@ -125,6 +137,7 @@
     "year": 2023,
     "range_km": 400,
     "price_usd": 60000,
+    "price_nok": 630000,
     "trunk_space_liters": 432,
     "horse_power": 314,
     "image_url": "img/genesis-gv60.jpg"
@@ -135,6 +148,7 @@
     "year": 2024,
     "range_km": 528,
     "price_usd": 42000,
+    "price_nok": 441000,
     "trunk_space_liters": 490,
     "horse_power": 225,
     "image_url": "img/kia-ev6.jpg"
@@ -145,6 +159,7 @@
     "year": 2022,
     "range_km": 505,
     "price_usd": 47000,
+    "price_nok": 493500,
     "trunk_space_liters": 940,
     "horse_power": 509,
     "image_url": "img/byd-tang.jpg"
@@ -155,6 +170,7 @@
     "year": 2024,
     "range_km": 530,
     "price_usd": 45000,
+    "price_nok": 472500,
     "trunk_space_liters": 585,
     "horse_power": 201,
     "image_url": "img/skoda-enyaq.jpg"
@@ -165,6 +181,7 @@
     "year": 2024,
     "range_km": 650,
     "price_usd": 56700,
+    "price_nok": 595350,
     "trunk_space_liters": 660,
     "horse_power": 551,
     "image_url": "img/xpeng-g9.jpg"
