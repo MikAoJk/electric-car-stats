@@ -158,5 +158,15 @@
     "trunk_space_liters": 585,
     "horse_power": 201,
     "image_url": "img/skoda-enyaq.jpg"
+  },
+  {
+    "make": "Xpeng",
+    "model": "G9",
+    "year": 2024,
+    "range_km": 650,
+    "price_usd": 56700,
+    "trunk_space_liters": 660,
+    "horse_power": 551,
+    "image_url": "img/xpeng-g9.jpg"
   }
 ]
