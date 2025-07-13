@@ -5,6 +5,7 @@
     "year": 2024,
     "battery_capacity_kWh": 60,
     "range_km": 430,
+    "efficiency_wh_per_km": 140,
     "charging_time_hours": 8,
     "acceleration_0_100_kmh": 5.6,
     "price_usd": 40000
@@ -15,6 +16,7 @@
     "year": 2023,
     "battery_capacity_kWh": 40,
     "range_km": 270,
+    "efficiency_wh_per_km": 148,
     "charging_time_hours": 7.5,
     "acceleration_0_100_kmh": 7.9,
     "price_usd": 32000
@@ -25,6 +27,7 @@
     "year": 2024,
     "battery_capacity_kWh": 64,
     "range_km": 484,
+    "efficiency_wh_per_km": 132,
     "charging_time_hours": 9.5,
     "acceleration_0_100_kmh": 7.6,
     "price_usd": 42000
@@ -35,8 +38,119 @@
     "year": 2024,
     "battery_capacity_kWh": 77,
     "range_km": 520,
+    "efficiency_wh_per_km": 148,
     "charging_time_hours": 8,
     "acceleration_0_100_kmh": 8.5,
     "price_usd": 45000
+  },
+  {
+    "make": "BMW",
+    "model": "iX3",
+    "year": 2023,
+    "battery_capacity_kWh": 74,
+    "range_km": 460,
+    "efficiency_wh_per_km": 161,
+    "charging_time_hours": 7.5,
+    "acceleration_0_100_kmh": 6.8,
+    "price_usd": 55000
+  },
+  {
+    "make": "Audi",
+    "model": "e-tron",
+    "year": 2024,
+    "battery_capacity_kWh": 95,
+    "range_km": 436,
+    "efficiency_wh_per_km": 218,
+    "charging_time_hours": 8.5,
+    "acceleration_0_100_kmh": 5.7,
+    "price_usd": 75000
+  },
+  {
+    "make": "Mercedes",
+    "model": "EQS",
+    "year": 2024,
+    "battery_capacity_kWh": 108,
+    "range_km": 770,
+    "efficiency_wh_per_km": 140,
+    "charging_time_hours": 10,
+    "acceleration_0_100_kmh": 4.3,
+    "price_usd": 105000
+  },
+  {
+    "make": "Ford",
+    "model": "Mustang Mach-E",
+    "year": 2023,
+    "battery_capacity_kWh": 91,
+    "range_km": 491,
+    "efficiency_wh_per_km": 185,
+    "charging_time_hours": 8,
+    "acceleration_0_100_kmh": 6.1,
+    "price_usd": 48000
+  },
+  {
+    "make": "Lucid",
+    "model": "Air",
+    "year": 2024,
+    "battery_capacity_kWh": 118,
+    "range_km": 832,
+    "efficiency_wh_per_km": 142,
+    "charging_time_hours": 12,
+    "acceleration_0_100_kmh": 2.5,
+    "price_usd": 89000
+  },
+  {
+    "make": "Rivian",
+    "model": "R1T",
+    "year": 2023,
+    "battery_capacity_kWh": 135,
+    "range_km": 505,
+    "efficiency_wh_per_km": 267,
+    "charging_time_hours": 11,
+    "acceleration_0_100_kmh": 3.0,
+    "price_usd": 75000
+  },
+  {
+    "make": "Polestar",
+    "model": "2",
+    "year": 2024,
+    "battery_capacity_kWh": 78,
+    "range_km": 540,
+    "efficiency_wh_per_km": 144,
+    "charging_time_hours": 8,
+    "acceleration_0_100_kmh": 4.7,
+    "price_usd": 50000
+  },
+  {
+    "make": "Genesis",
+    "model": "GV60",
+    "year": 2023,
+    "battery_capacity_kWh": 77,
+    "range_km": 400,
+    "efficiency_wh_per_km": 193,
+    "charging_time_hours": 7.5,
+    "acceleration_0_100_kmh": 4.0,
+    "price_usd": 60000
+  },
+  {
+    "make": "Kia",
+    "model": "EV6",
+    "year": 2024,
+    "battery_capacity_kWh": 77,
+    "range_km": 528,
+    "efficiency_wh_per_km": 146,
+    "charging_time_hours": 7.5,
+    "acceleration_0_100_kmh": 5.2,
+    "price_usd": 42000
+  },
+  {
+    "make": "BYD",
+    "model": "Tang",
+    "year": 2022,
+    "battery_capacity_kWh": 86,
+    "range_km": 505,
+    "efficiency_wh_per_km": 170,
+    "charging_time_hours": 9,
+    "acceleration_0_100_kmh": 4.4,
+    "price_usd": 47000
   }
 ]
