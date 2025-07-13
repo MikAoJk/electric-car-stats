@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Car Stats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+        }
+        
+        tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .price {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        
+        .range {
+            color: #1976d2;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 20px;
+            color: #d32f2f;
+            background-color: #ffebee;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            th, td {
+                padding: 6px;
+            }
+            
+            table {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Electric Car Stats</h1>
+        <div id="loading" class="loading">Loading car data...</div>
+        <div id="error" class="error" style="display: none;"></div>
+        <div class="table-container">
+            <table id="carTable" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Range (km)</th>
+                        <th>Price (USD)</th>
+                        <th>Trunk Space (L)</th>
+                        <th>Horsepower</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Function to format currency
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+
+        // Function to format numbers with commas
+        function formatNumber(num) {
+            return new Intl.NumberFormat('en-US').format(num);
+        }
+
+        // Function to load and display car data
+        async function loadCarData() {
+            const loadingDiv = document.getElementById('loading');
+            const errorDiv = document.getElementById('error');
+            const table = document.getElementById('carTable');
+            const tableBody = document.getElementById('tableBody');
+
+            try {
+                // Fetch the stats.json file
+                const response = await fetch('stats.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const carData = await response.json();
+                
+                // Clear existing table data
+                tableBody.innerHTML = '';
+                
+                // Populate table with car data
+                carData.forEach(car => {
+                    const row = document.createElement('tr');
+                    
+                    row.innerHTML = `
+                        <td>${car.make}</td>
+                        <td>${car.model}</td>
+                        <td>${car.year}</td>
+                        <td class="range">${formatNumber(car.range_km)}</td>
+                        <td class="price">${formatCurrency(car.price_usd)}</td>
+                        <td>${formatNumber(car.trunk_space_liters)}</td>
+                        <td>${formatNumber(car.horse_power)}</td>
+                    `;
+                    
+                    tableBody.appendChild(row);
+                });
+                
+                // Hide loading, show table
+                loadingDiv.style.display = 'none';
+                table.style.display = 'table';
+                
+            } catch (error) {
+                console.error('Error loading car data:', error);
+                loadingDiv.style.display = 'none';
+                errorDiv.textContent = `Error loading car data: ${error.message}`;
+                errorDiv.style.display = 'block';
+            }
+        }
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadCarData);
+    </script>
+</body>
+</html>
