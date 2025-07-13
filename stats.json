@@ -7,7 +7,7 @@
     "price_usd": 40000,
     "trunk_space_liters": 425,
     "horse_power": 283,
-    "image_url": "https://picsum.photos/400/300?random=1"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Tesla_Model_3_in_Dublin.jpg/800px-Tesla_Model_3_in_Dublin.jpg"
   },
   {
     "make": "Tesla",
@@ -17,7 +17,7 @@
     "price_usd": 47990,
     "trunk_space_liters": 854,
     "horse_power": 384,
-    "image_url": "https://picsum.photos/400/300?random=2"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tesla_Model_Y_Performance_20210307.jpg/800px-Tesla_Model_Y_Performance_20210307.jpg"
   },
   {
     "make": "Nissan",
@@ -27,7 +27,7 @@
     "price_usd": 32000,
     "trunk_space_liters": 420,
     "horse_power": 147,
-    "image_url": "https://picsum.photos/400/300?random=3"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2018_Nissan_Leaf_Acenta_1.jpg/800px-2018_Nissan_Leaf_Acenta_1.jpg"
   },
   {
     "make": "Hyundai",
@@ -37,7 +37,7 @@
     "price_usd": 42000,
     "trunk_space_liters": 466,
     "horse_power": 201,
-    "image_url": "https://broken-url-test.example.com/image.jpg"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/2019_Hyundai_Kona_Electric_64_kWh_Premium_SE_facelift.jpg/800px-2019_Hyundai_Kona_Electric_64_kWh_Premium_SE_facelift.jpg"
   },
   {
     "make": "Volkswagen",
@@ -46,7 +46,8 @@
     "range_km": 520,
     "price_usd": 45000,
     "trunk_space_liters": 543,
-    "horse_power": 201
+    "horse_power": 201,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Volkswagen_ID.4_Pro_Performance_IMG_4117.jpg/800px-Volkswagen_ID.4_Pro_Performance_IMG_4117.jpg"
   },
   {
     "make": "BMW",
@@ -56,7 +57,7 @@
     "price_usd": 55000,
     "trunk_space_liters": 510,
     "horse_power": 286,
-    "image_url": "https://picsum.photos/400/300?random=4"
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/BMW_iX3_IMG_4319.jpg/800px-BMW_iX3_IMG_4319.jpg"
   },
   {
     "make": "Audi",
@@ -65,7 +66,8 @@
     "range_km": 436,
     "price_usd": 75000,
     "trunk_space_liters": 660,
-    "horse_power": 355
+    "horse_power": 355,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2019_Audi_e-tron_55_quattro_S_Line_Front.jpg/800px-2019_Audi_e-tron_55_quattro_S_Line_Front.jpg"
   },
   {
     "make": "Mercedes",
@@ -74,7 +76,8 @@
     "range_km": 770,
     "price_usd": 105000,
     "trunk_space_liters": 610,
-    "horse_power": 329
+    "horse_power": 329,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Mercedes-EQS_450%2B_AMG_Line_%28V297%29_IMG_5316.jpg/800px-Mercedes-EQS_450%2B_AMG_Line_%28V297%29_IMG_5316.jpg"
   },
   {
     "make": "Ford",
@@ -83,7 +86,8 @@
     "range_km": 491,
     "price_usd": 48000,
     "trunk_space_liters": 402,
-    "horse_power": 266
+    "horse_power": 266,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Ford_Mustang_Mach-E_California_Route_1_in_Grabber_Blue.jpg/800px-2021_Ford_Mustang_Mach-E_California_Route_1_in_Grabber_Blue.jpg"
   },
   {
     "make": "Lucid",
@@ -92,7 +96,8 @@
     "range_km": 832,
     "price_usd": 89000,
     "trunk_space_liters": 627,
-    "horse_power": 480
+    "horse_power": 480,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lucid_Air_Dream_Edition_Performance_IMG_5382.jpg/800px-Lucid_Air_Dream_Edition_Performance_IMG_5382.jpg"
   },
   {
     "make": "Rivian",
@@ -101,7 +106,8 @@
     "range_km": 505,
     "price_usd": 75000,
     "trunk_space_liters": 828,
-    "horse_power": 835
+    "horse_power": 835,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2022_Rivian_R1T_Launch_Edition_in_Launch_Green.jpg/800px-2022_Rivian_R1T_Launch_Edition_in_Launch_Green.jpg"
   },
   {
     "make": "Polestar",
@@ -110,7 +116,8 @@
     "range_km": 540,
     "price_usd": 50000,
     "trunk_space_liters": 405,
-    "horse_power": 231
+    "horse_power": 231,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Polestar_2_LR_DM_Performance_IMG_5235.jpg/800px-Polestar_2_LR_DM_Performance_IMG_5235.jpg"
   },
   {
     "make": "Genesis",
@@ -119,7 +126,8 @@
     "range_km": 400,
     "price_usd": 60000,
     "trunk_space_liters": 432,
-    "horse_power": 314
+    "horse_power": 314,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Genesis_GV60_Performance_IMG_5142.jpg/800px-Genesis_GV60_Performance_IMG_5142.jpg"
   },
   {
     "make": "Kia",
@@ -128,7 +136,8 @@
     "range_km": 528,
     "price_usd": 42000,
     "trunk_space_liters": 490,
-    "horse_power": 225
+    "horse_power": 225,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Kia_EV6_GT_IMG_5263.jpg/800px-Kia_EV6_GT_IMG_5263.jpg"
   },
   {
     "make": "BYD",
@@ -137,7 +146,8 @@
     "range_km": 505,
     "price_usd": 47000,
     "trunk_space_liters": 940,
-    "horse_power": 509
+    "horse_power": 509,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BYD_Tang_EV_2018.jpg/800px-BYD_Tang_EV_2018.jpg"
   },
   {
   "make": "Skoda",
@@ -146,6 +156,7 @@
   "range_km": 530,
   "price_usd": 45000,
   "trunk_space_liters": 585,
-  "horse_power": 201
+  "horse_power": 201,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Skoda_Enyaq_iV_80_IMG_4335.jpg/800px-Skoda_Enyaq_iV_80_IMG_4335.jpg"
   }
 ]
