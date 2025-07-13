@@ -1,0 +1,42 @@
+[
+  {
+    "make": "Tesla",
+    "model": "Model 3",
+    "year": 2024,
+    "battery_capacity_kWh": 60,
+    "range_km": 430,
+    "charging_time_hours": 8,
+    "acceleration_0_100_kmh": 5.6,
+    "price_usd": 40000
+  },
+  {
+    "make": "Nissan",
+    "model": "Leaf",
+    "year": 2023,
+    "battery_capacity_kWh": 40,
+    "range_km": 270,
+    "charging_time_hours": 7.5,
+    "acceleration_0_100_kmh": 7.9,
+    "price_usd": 32000
+  },
+  {
+    "make": "Hyundai",
+    "model": "Kona Electric",
+    "year": 2024,
+    "battery_capacity_kWh": 64,
+    "range_km": 484,
+    "charging_time_hours": 9.5,
+    "acceleration_0_100_kmh": 7.6,
+    "price_usd": 42000
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID.4",
+    "year": 2024,
+    "battery_capacity_kWh": 77,
+    "range_km": 520,
+    "charging_time_hours": 8,
+    "acceleration_0_100_kmh": 8.5,
+    "price_usd": 45000
+  }
+]
