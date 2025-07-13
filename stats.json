@@ -110,5 +110,13 @@
     "range_km": 505,
     "price_usd": 47000,
     "trunk_space_liters": 940
+  },
+  {
+  "make": "Skoda",
+  "model": "Enyaq",
+  "year": 2024,
+  "range_km": 530,
+  "price_usd": 45000,
+  "trunk_space_liters": 585
   }
 ]
