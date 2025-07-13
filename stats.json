@@ -7,7 +7,7 @@
     "price_usd": 40000,
     "trunk_space_liters": 425,
     "horse_power": 283,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Tesla_Model_3_in_Dublin.jpg/1200px-Tesla_Model_3_in_Dublin.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23E5E7EB'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23374151' text-anchor='middle' dominant-baseline='middle'%3ETesla Model 3%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Tesla",
@@ -17,7 +17,7 @@
     "price_usd": 47990,
     "trunk_space_liters": 854,
     "horse_power": 384,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Tesla_Model_Y_Performance_20210307.jpg/1200px-Tesla_Model_Y_Performance_20210307.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23DC2626'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ETesla Model Y%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Nissan",
@@ -27,7 +27,7 @@
     "price_usd": 32000,
     "trunk_space_liters": 420,
     "horse_power": 147,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/2018_Nissan_Leaf_Acenta_1.jpg/1200px-2018_Nissan_Leaf_Acenta_1.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23B91C1C'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ENissan Leaf%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Hyundai",
@@ -37,7 +37,7 @@
     "price_usd": 42000,
     "trunk_space_liters": 466,
     "horse_power": 201,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/2019_Hyundai_Kona_Electric_64_kWh_Premium_SE_facelift.jpg/1200px-2019_Hyundai_Kona_Electric_64_kWh_Premium_SE_facelift.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23059669'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='14' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EHyundai Kona Electric%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Volkswagen",
@@ -47,7 +47,7 @@
     "price_usd": 45000,
     "trunk_space_liters": 543,
     "horse_power": 201,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Volkswagen_ID.4_Pro_Performance_IMG_4117.jpg/1200px-Volkswagen_ID.4_Pro_Performance_IMG_4117.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23D946EF'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EVolkswagen ID.4%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "BMW",
@@ -57,7 +57,7 @@
     "price_usd": 55000,
     "trunk_space_liters": 510,
     "horse_power": 286,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/BMW_iX3_IMG_4319.jpg/1200px-BMW_iX3_IMG_4319.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23334155'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EBMW iX3%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Audi",
@@ -67,7 +67,7 @@
     "price_usd": 75000,
     "trunk_space_liters": 660,
     "horse_power": 355,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/2019_Audi_e-tron_55_quattro_S_Line_Front.jpg/1200px-2019_Audi_e-tron_55_quattro_S_Line_Front.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23B45309'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EAudi e-tron%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Mercedes",
@@ -77,7 +77,7 @@
     "price_usd": 105000,
     "trunk_space_liters": 610,
     "horse_power": 329,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Mercedes-EQS_450%2B_AMG_Line_%28V297%29_IMG_5316.jpg/1200px-Mercedes-EQS_450%2B_AMG_Line_%28V297%29_IMG_5316.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23374151'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EMercedes EQS%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Ford",
@@ -87,7 +87,7 @@
     "price_usd": 48000,
     "trunk_space_liters": 402,
     "horse_power": 266,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2021_Ford_Mustang_Mach-E_California_Route_1_in_Grabber_Blue.jpg/1200px-2021_Ford_Mustang_Mach-E_California_Route_1_in_Grabber_Blue.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23065F46'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='14' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EFord Mustang Mach-E%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Lucid",
@@ -97,7 +97,7 @@
     "price_usd": 89000,
     "trunk_space_liters": 627,
     "horse_power": 480,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Lucid_Air_Dream_Edition_Performance_IMG_5382.jpg/1200px-Lucid_Air_Dream_Edition_Performance_IMG_5382.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23581C87'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ELucid Air%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Rivian",
@@ -107,7 +107,7 @@
     "price_usd": 75000,
     "trunk_space_liters": 828,
     "horse_power": 835,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2022_Rivian_R1T_Launch_Edition_in_Launch_Green.jpg/1200px-2022_Rivian_R1T_Launch_Edition_in_Launch_Green.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23047857'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ERivian R1T%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Polestar",
@@ -117,7 +117,7 @@
     "price_usd": 50000,
     "trunk_space_liters": 405,
     "horse_power": 231,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Polestar_2_LR_DM_Performance_IMG_5235.jpg/1200px-Polestar_2_LR_DM_Performance_IMG_5235.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23E11D48'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EPolestar 2%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Genesis",
@@ -127,7 +127,7 @@
     "price_usd": 60000,
     "trunk_space_liters": 432,
     "horse_power": 314,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Genesis_GV60_Performance_IMG_5142.jpg/1200px-Genesis_GV60_Performance_IMG_5142.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23991B1B'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EGenesis GV60%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Kia",
@@ -137,7 +137,7 @@
     "price_usd": 42000,
     "trunk_space_liters": 490,
     "horse_power": 225,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Kia_EV6_GT_IMG_5263.jpg/1200px-Kia_EV6_GT_IMG_5263.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23DC2626'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EKia EV6%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "BYD",
@@ -147,7 +147,7 @@
     "price_usd": 47000,
     "trunk_space_liters": 940,
     "horse_power": 509,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/BYD_Tang_EV_2018.jpg/1200px-BYD_Tang_EV_2018.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23C2410C'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3EBYD Tang%3C/text%3E%3C/svg%3E"
   },
   {
     "make": "Skoda",
@@ -157,6 +157,6 @@
     "price_usd": 45000,
     "trunk_space_liters": 585,
     "horse_power": 201,
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Skoda_Enyaq_iV_80_IMG_4335.jpg/1200px-Skoda_Enyaq_iV_80_IMG_4335.jpg"
+    "image_url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23059669'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='16' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='middle'%3ESkoda Enyaq%3C/text%3E%3C/svg%3E"
   }
 ]
