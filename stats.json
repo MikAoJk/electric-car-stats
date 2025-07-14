@@ -6,8 +6,7 @@
     "range_km": 430,
     "price_usd": 40000,
     "trunk_space_liters": 425,
-    "horse_power": 283,
-    "image_url": "img/tesla-model-3.jpg"
+    "horse_power": 283
   },
   {
     "make": "Tesla",
@@ -16,8 +15,7 @@
     "range_km": 533,
     "price_usd": 47990,
     "trunk_space_liters": 854,
-    "horse_power": 384,
-    "image_url": "img/tesla-model-y.jpg"
+    "horse_power": 384
   },
   {
     "make": "Nissan",
@@ -26,8 +24,7 @@
     "range_km": 270,
     "price_usd": 32000,
     "trunk_space_liters": 420,
-    "horse_power": 147,
-    "image_url": "img/nissan-leaf.jpg"
+    "horse_power": 147
   },
   {
     "make": "Hyundai",
@@ -36,8 +33,7 @@
     "range_km": 484,
     "price_usd": 42000,
     "trunk_space_liters": 466,
-    "horse_power": 201,
-    "image_url": "img/hyundai-kona-electric.jpg"
+    "horse_power": 201
   },
   {
     "make": "Volkswagen",
@@ -46,8 +42,7 @@
     "range_km": 520,
     "price_usd": 45000,
     "trunk_space_liters": 543,
-    "horse_power": 201,
-    "image_url": "img/volkswagen-id.4.jpg"
+    "horse_power": 201
   },
   {
     "make": "BMW",
@@ -56,8 +51,7 @@
     "range_km": 460,
     "price_usd": 55000,
     "trunk_space_liters": 510,
-    "horse_power": 286,
-    "image_url": "img/bmw-ix3.jpg"
+    "horse_power": 286
   },
   {
     "make": "Audi",
@@ -66,8 +60,7 @@
     "range_km": 436,
     "price_usd": 75000,
     "trunk_space_liters": 660,
-    "horse_power": 355,
-    "image_url": "img/audi-e-tron.jpg"
+    "horse_power": 355
   },
   {
     "make": "Mercedes",
@@ -76,8 +69,7 @@
     "range_km": 770,
     "price_usd": 105000,
     "trunk_space_liters": 610,
-    "horse_power": 329,
-    "image_url": "img/mercedes-eqs.jpg"
+    "horse_power": 329
   },
   {
     "make": "Ford",
@@ -86,8 +78,7 @@
     "range_km": 491,
     "price_usd": 48000,
     "trunk_space_liters": 402,
-    "horse_power": 266,
-    "image_url": "img/ford-mustang-mach-e.jpg"
+    "horse_power": 266
   },
   {
     "make": "Lucid",
@@ -96,8 +87,7 @@
     "range_km": 832,
     "price_usd": 89000,
     "trunk_space_liters": 627,
-    "horse_power": 480,
-    "image_url": "img/lucid-air.jpg"
+    "horse_power": 480
   },
   {
     "make": "Rivian",
@@ -106,8 +96,7 @@
     "range_km": 505,
     "price_usd": 75000,
     "trunk_space_liters": 828,
-    "horse_power": 835,
-    "image_url": "img/rivian-r1t.jpg"
+    "horse_power": 835
   },
   {
     "make": "Polestar",
@@ -116,8 +105,7 @@
     "range_km": 540,
     "price_usd": 50000,
     "trunk_space_liters": 405,
-    "horse_power": 231,
-    "image_url": "img/polestar-2.jpg"
+    "horse_power": 231
   },
   {
     "make": "Genesis",
@@ -126,8 +114,7 @@
     "range_km": 400,
     "price_usd": 60000,
     "trunk_space_liters": 432,
-    "horse_power": 314,
-    "image_url": "img/genesis-gv60.jpg"
+    "horse_power": 314
   },
   {
     "make": "Kia",
@@ -136,8 +123,7 @@
     "range_km": 528,
     "price_usd": 42000,
     "trunk_space_liters": 490,
-    "horse_power": 225,
-    "image_url": "img/kia-ev6.jpg"
+    "horse_power": 225
   },
   {
     "make": "BYD",
@@ -146,8 +132,7 @@
     "range_km": 505,
     "price_usd": 47000,
     "trunk_space_liters": 940,
-    "horse_power": 509,
-    "image_url": "img/byd-tang.jpg"
+    "horse_power": 509
   },
   {
     "make": "Skoda",
@@ -156,8 +141,7 @@
     "range_km": 530,
     "price_usd": 45000,
     "trunk_space_liters": 585,
-    "horse_power": 201,
-    "image_url": "img/skoda-enyaq.jpg"
+    "horse_power": 201
   },
   {
     "make": "Xpeng",
@@ -166,7 +150,6 @@
     "range_km": 650,
     "price_usd": 56700,
     "trunk_space_liters": 660,
-    "horse_power": 551,
-    "image_url": "img/xpeng-g9.jpg"
+    "horse_power": 551
   }
 ]
