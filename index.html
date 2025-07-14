@@ -41,28 +41,7 @@
             border: 1px solid #e0e0e0;
         }
         
-        .car-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            background-color: #f0f0f0;
-        }
-        
-        .car-image-placeholder {
-            width: 100%;
-            height: 200px;
-            background-color: #f0f0f0;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 0.9rem;
-            border: 2px dashed #ddd;
-        }
+
         
         .car-card:hover {
             transform: translateY(-2px);
@@ -239,17 +218,7 @@
                     const cardElement = document.createElement('div');
                     cardElement.className = 'car-card';
                     
-                    // Generate image HTML
-                    let imageHTML = '';
-                    if (car.image_url) {
-                        imageHTML = `<img src="${car.image_url}" alt="${car.make} ${car.model}" class="car-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                     <div class="car-image-placeholder" style="display: none;">No Image Available</div>`;
-                    } else {
-                        imageHTML = `<div class="car-image-placeholder">No Image Available</div>`;
-                    }
-                    
                     cardElement.innerHTML = `
-                        ${imageHTML}
                         <div class="car-header">
                             <div class="car-title">${car.make} ${car.model}</div>
                             <div class="car-year">${car.year}</div>
