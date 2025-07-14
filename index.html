@@ -221,6 +221,42 @@
             z-index: 10;
         }
         
+        .cars-table th.sortable {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            transition: background-color 0.2s ease;
+        }
+        
+        .cars-table th.sortable:hover {
+            background-color: #e9ecef;
+        }
+        
+        .cars-table th.sortable::after {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            opacity: 0.3;
+        }
+        
+        .cars-table th.sortable.sort-asc::after {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 6px solid #333;
+            opacity: 1;
+        }
+        
+        .cars-table th.sortable.sort-desc::after {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 6px solid #333;
+            opacity: 1;
+        }
+        
         .cars-table td {
             padding: 12px;
             border-bottom: 1px solid #f0f0f0;
@@ -380,11 +416,11 @@
                         <th>Brand</th>
                         <th>Model</th>
                         <th>Year</th>
-                        <th>Range (km)</th>
-                        <th>Price (USD)</th>
-                        <th>Weight (kg)</th>
-                        <th>Trunk Space (L)</th>
-                        <th>Horsepower (HP)</th>
+                        <th class="sortable" data-column="range">Range (km)</th>
+                        <th class="sortable" data-column="price">Price (USD)</th>
+                        <th class="sortable" data-column="weight">Weight (kg)</th>
+                        <th class="sortable" data-column="trunk_space">Trunk Space (L)</th>
+                        <th class="sortable" data-column="horsepower">Horsepower (HP)</th>
                     </tr>
                 </thead>
                 <tbody id="carsTableBody">
@@ -409,6 +445,72 @@
             return new Intl.NumberFormat('en-US').format(num);
         }
 
+        // Function to get the value for sorting from a car object
+        function getSortValue(car, column) {
+            switch(column) {
+                case 'range':
+                    return car.range_km;
+                case 'price':
+                    return car.price_usd;
+                case 'weight':
+                    return car.weight_kg || 0; // Handle missing weight
+                case 'trunk_space':
+                    return car.trunk_space_liters;
+                case 'horsepower':
+                    return car.horse_power;
+                default:
+                    return 0;
+            }
+        }
+
+        // Function to sort cars array
+        function sortCars(cars, column, direction) {
+            return cars.sort((a, b) => {
+                const aValue = getSortValue(a, column);
+                const bValue = getSortValue(b, column);
+                
+                if (direction === 'asc') {
+                    return aValue - bValue;
+                } else {
+                    return bValue - aValue;
+                }
+            });
+        }
+
+        // Function to update sort indicators in table headers
+        function updateSortIndicators() {
+            // Remove all existing sort classes
+            document.querySelectorAll('.cars-table th.sortable').forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            
+            // Add appropriate class to current sort column
+            if (currentSortColumn) {
+                const currentHeader = document.querySelector(`th[data-column="${currentSortColumn}"]`);
+                if (currentHeader) {
+                    currentHeader.classList.add(currentSortDirection === 'asc' ? 'sort-asc' : 'sort-desc');
+                }
+            }
+        }
+
+        // Function to handle column header clicks
+        function handleColumnSort(column) {
+            // If clicking the same column, toggle direction
+            if (currentSortColumn === column) {
+                currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                // New column, start with ascending
+                currentSortColumn = column;
+                currentSortDirection = 'asc';
+            }
+            
+            // Update visual indicators
+            updateSortIndicators();
+            
+            // Re-filter and display with new sort
+            filterAndDisplayCars();
+        }
+
         // Global variables
         let allCarData = [];
         let rangeSlider;
@@ -420,6 +522,10 @@
         let noResults;
         let rangeFilter;
         let trunkSpaceFilter;
+        
+        // Sorting variables
+        let currentSortColumn = '';
+        let currentSortDirection = 'asc'; // 'asc' or 'desc'
 
         // Function to create a table row element
         function createTableRow(car) {
@@ -447,9 +553,14 @@
         function filterAndDisplayCars() {
             const minRange = parseInt(rangeSlider.value);
             const minTrunkSpace = parseInt(trunkSpaceSlider.value);
-            const filteredCars = allCarData.filter(car => 
+            let filteredCars = allCarData.filter(car => 
                 car.range_km >= minRange && car.trunk_space_liters >= minTrunkSpace
             );
+            
+            // Apply sorting if a column is selected
+            if (currentSortColumn) {
+                filteredCars = sortCars(filteredCars, currentSortColumn, currentSortDirection);
+            }
             
             // Update value displays
             rangeValue.textContent = `${formatNumber(minRange)} km`;
@@ -547,6 +658,14 @@
                 // Initialize both sliders and display cars
                 initializeRangeSlider();
                 initializeTrunkSpaceSlider();
+                
+                // Add click event listeners to sortable headers
+                document.querySelectorAll('.cars-table th.sortable').forEach(th => {
+                    th.addEventListener('click', () => {
+                        const column = th.getAttribute('data-column');
+                        handleColumnSort(column);
+                    });
+                });
                 
                 // Hide loading
                 loadingDiv.style.display = 'none';
