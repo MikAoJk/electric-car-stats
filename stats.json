@@ -1,15 +1,15 @@
 [
-  { "make": "Audi", "model": "e-tron", "year": 2024, "range_km": 436, "price_usd": 75000, "trunk_space_liters": 660, "horse_power": 355, "weight_kg": null },
-  { "make": "Peugeot", "model": "E-5008", "year": 2024, "range_km": 560, "price_usd": 69700, "trunk_space_liters": 748, "horse_power": 231, "weight_kg": null },
-  { "make": "CUPRA", "model": "Tavascan", "year": 2024, "range_km": 569, "price_usd": 67000, "trunk_space_liters": 540, "horse_power": 340, "weight_kg": null },
-  { "make": "Volkswagen", "model": "ID. Buzz", "year": 2024, "range_km": 420, "price_usd": 65000, "trunk_space_liters": 1121, "horse_power": 282, "weight_kg": null },
-  { "make": "Xpeng", "model": "G9", "year": 2024, "range_km": 650, "price_usd": 56700, "trunk_space_liters": 660, "horse_power": 551, "weight_kg": null },
-  { "make": "Polestar", "model": "2", "year": 2024, "range_km": 540, "price_usd": 50000, "trunk_space_liters": 405, "horse_power": 231, "weight_kg": null },
-  { "make": "Hyundai", "model": "IONIQ 5", "year": 2024, "range_km": 488, "price_usd": 48500, "trunk_space_liters": 531, "horse_power": 225, "weight_kg": null },
-  { "make": "Tesla", "model": "Model Y", "year": 2024, "range_km": 533, "price_usd": 47990, "trunk_space_liters": 854, "horse_power": 384, "weight_kg": null },
-  { "make": "BYD", "model": "Tang", "year": 2022, "range_km": 505, "price_usd": 47000, "trunk_space_liters": 940, "horse_power": 509, "weight_kg": null },
-  { "make": "Volkswagen", "model": "ID.4", "year": 2024, "range_km": 520, "price_usd": 45000, "trunk_space_liters": 543, "horse_power": 201, "weight_kg": null },
-  { "make": "Skoda", "model": "Enyaq", "year": 2024, "range_km": 530, "price_usd": 45000, "trunk_space_liters": 585, "horse_power": 201, "weight_kg": null },
-  { "make": "Hyundai", "model": "Kona Electric", "year": 2024, "range_km": 484, "price_usd": 42000, "trunk_space_liters": 466, "horse_power": 201, "weight_kg": null },
-  { "make": "Kia", "model": "EV6", "year": 2024, "range_km": 528, "price_usd": 42000, "trunk_space_liters": 490, "horse_power": 225, "weight_kg": null }
+  { "make": "Audi", "model": "e-tron", "year": 2024, "range_km": 436, "price_usd": 75000, "trunk_space_liters": 660, "horse_power": 355, "weight_kg": 2305 },
+  { "make": "Peugeot", "model": "E-5008", "year": 2024, "range_km": 560, "price_usd": 69700, "trunk_space_liters": 748, "horse_power": 231, "weight_kg": 2150 },
+  { "make": "CUPRA", "model": "Tavascan", "year": 2024, "range_km": 569, "price_usd": 67000, "trunk_space_liters": 540, "horse_power": 340, "weight_kg": 2103 },
+  { "make": "Volkswagen", "model": "ID. Buzz", "year": 2024, "range_km": 420, "price_usd": 65000, "trunk_space_liters": 1121, "horse_power": 282, "weight_kg": 2393 },
+  { "make": "Xpeng", "model": "G9", "year": 2024, "range_km": 650, "price_usd": 56700, "trunk_space_liters": 660, "horse_power": 551, "weight_kg": 2355 },
+  { "make": "Polestar", "model": "2", "year": 2024, "range_km": 540, "price_usd": 50000, "trunk_space_liters": 405, "horse_power": 231, "weight_kg": 2105 },
+  { "make": "Hyundai", "model": "IONIQ 5", "year": 2024, "range_km": 488, "price_usd": 48500, "trunk_space_liters": 531, "horse_power": 225, "weight_kg": 1830 },
+  { "make": "Tesla", "model": "Model Y", "year": 2024, "range_km": 533, "price_usd": 47990, "trunk_space_liters": 854, "horse_power": 384, "weight_kg": 1900 },
+  { "make": "BYD", "model": "Tang", "year": 2022, "range_km": 505, "price_usd": 47000, "trunk_space_liters": 940, "horse_power": 509, "weight_kg": 2360 },
+  { "make": "Volkswagen", "model": "ID.4", "year": 2024, "range_km": 520, "price_usd": 45000, "trunk_space_liters": 543, "horse_power": 201, "weight_kg": 1954 },
+  { "make": "Skoda", "model": "Enyaq", "year": 2024, "range_km": 530, "price_usd": 45000, "trunk_space_liters": 585, "horse_power": 201, "weight_kg": 1937 },
+  { "make": "Hyundai", "model": "Kona Electric", "year": 2024, "range_km": 484, "price_usd": 42000, "trunk_space_liters": 466, "horse_power": 201, "weight_kg": 1680 },
+  { "make": "Kia", "model": "EV6", "year": 2024, "range_km": 528, "price_usd": 42000, "trunk_space_liters": 490, "horse_power": 225, "weight_kg": 1807 }
 ]
