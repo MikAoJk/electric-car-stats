@@ -194,6 +194,78 @@
             margin: 20px 0;
         }
         
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        .cars-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        .cars-table th {
+            background: #f8f9fa;
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .cars-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: middle;
+        }
+        
+        .cars-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .cars-table .brand-model {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .cars-table .year {
+            background: #4CAF50;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .cars-table .range {
+            color: #1976d2;
+            font-weight: 600;
+        }
+        
+        .cars-table .price {
+            color: #2e7d32;
+            font-weight: 600;
+        }
+        
+        .cars-table .weight {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+        
+        .cars-table .power {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+        
         /* Responsive design */
         @media (max-width: 768px) {
             body {
@@ -220,6 +292,24 @@
             .car-title {
                 font-size: 1.1rem;
             }
+            
+            .table-container {
+                border-radius: 8px;
+                margin: 15px 0;
+            }
+            
+            .cars-table {
+                font-size: 0.8rem;
+            }
+            
+            .cars-table th,
+            .cars-table td {
+                padding: 8px 6px;
+            }
+            
+            .cars-table th {
+                font-size: 0.75rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -236,6 +326,23 @@
             
             h1 {
                 font-size: 1.8rem;
+            }
+            
+            .cars-table {
+                font-size: 0.75rem;
+            }
+            
+            .cars-table th,
+            .cars-table td {
+                padding: 6px 4px;
+            }
+            
+            .cars-table th {
+                font-size: 0.7rem;
+            }
+            
+            .year {
+                font-size: 0.7rem !important;
             }
         }
     </style>
@@ -258,7 +365,23 @@
             No cars match the filter. Try adjusting the minimum range.
         </div>
         
-        <div class="cards-container" id="cardsContainer" style="display: none;">
+        <div class="table-container" id="tableContainer" style="display: none;">
+            <table class="cars-table" id="carsTable">
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Range (km)</th>
+                        <th>Price (USD)</th>
+                        <th>Weight (kg)</th>
+                        <th>Trunk Space (L)</th>
+                        <th>Horsepower (HP)</th>
+                    </tr>
+                </thead>
+                <tbody id="carsTableBody">
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -282,42 +405,31 @@
         let allCarData = [];
         let rangeSlider;
         let rangeValue;
-        let cardsContainer;
+        let tableContainer;
+        let carsTableBody;
         let noResults;
         let rangeFilter;
 
-        // Function to create a car card element
-        function createCarCard(car) {
-            const cardElement = document.createElement('div');
-            cardElement.className = 'car-card';
-            cardElement.setAttribute('data-range', car.range_km);
+        // Function to create a table row element
+        function createTableRow(car) {
+            const rowElement = document.createElement('tr');
+            rowElement.setAttribute('data-range', car.range_km);
             
-            cardElement.innerHTML = `
-                <div class="car-header">
-                    <div class="car-title">${car.make} ${car.model}</div>
-                    <div class="car-year">${car.year}</div>
-                </div>
-                <div class="car-specs">
-                    <div class="spec-item">
-                        <div class="spec-label">Range</div>
-                        <div class="spec-value range">${formatNumber(car.range_km)} km</div>
-                    </div>
-                    <div class="spec-item">
-                        <div class="spec-label">Price</div>
-                        <div class="spec-value price">${formatCurrency(car.price_usd)}</div>
-                    </div>
-                    <div class="spec-item">
-                        <div class="spec-label">Trunk Space</div>
-                        <div class="spec-value">${formatNumber(car.trunk_space_liters)} L</div>
-                    </div>
-                    <div class="spec-item">
-                        <div class="spec-label">Horsepower</div>
-                        <div class="spec-value power">${formatNumber(car.horse_power)} HP</div>
-                    </div>
-                </div>
+            // Handle missing weight_kg field
+            const weight = car.weight_kg ? formatNumber(car.weight_kg) : 'N/A';
+            
+            rowElement.innerHTML = `
+                <td class="brand-model">${car.make}</td>
+                <td class="brand-model">${car.model}</td>
+                <td><span class="year">${car.year}</span></td>
+                <td class="range">${formatNumber(car.range_km)}</td>
+                <td class="price">${formatCurrency(car.price_usd)}</td>
+                <td class="weight">${weight}</td>
+                <td>${formatNumber(car.trunk_space_liters)}</td>
+                <td class="power">${formatNumber(car.horse_power)}</td>
             `;
             
-            return cardElement;
+            return rowElement;
         }
 
         // Function to filter and display cars
@@ -328,22 +440,22 @@
             // Update range value display
             rangeValue.textContent = `${formatNumber(minRange)} km`;
             
-            // Clear container
-            cardsContainer.innerHTML = '';
+            // Clear table body
+            carsTableBody.innerHTML = '';
             
             if (filteredCars.length === 0) {
                 // Show no results message
                 noResults.style.display = 'block';
-                cardsContainer.style.display = 'none';
+                tableContainer.style.display = 'none';
             } else {
                 // Show filtered cars
                 filteredCars.forEach(car => {
-                    const cardElement = createCarCard(car);
-                    cardsContainer.appendChild(cardElement);
+                    const rowElement = createTableRow(car);
+                    carsTableBody.appendChild(rowElement);
                 });
                 
                 noResults.style.display = 'none';
-                cardsContainer.style.display = 'grid';
+                tableContainer.style.display = 'block';
             }
         }
 
@@ -375,7 +487,8 @@
             const errorDiv = document.getElementById('error');
             
             // Get DOM elements
-            cardsContainer = document.getElementById('cardsContainer');
+            tableContainer = document.getElementById('tableContainer');
+            carsTableBody = document.getElementById('carsTableBody');
             noResults = document.getElementById('noResults');
             rangeFilter = document.getElementById('rangeFilter');
             rangeSlider = document.getElementById('rangeSlider');
