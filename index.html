@@ -361,8 +361,16 @@
             </div>
         </div>
         
+        <div class="range-filter" id="trunkSpaceFilter" style="display: none;">
+            <h3>Filter by Minimum Trunk Space</h3>
+            <div class="range-slider-container">
+                <input type="range" id="trunkSpaceSlider" class="range-slider" min="0" max="1200" value="0">
+                <div class="range-value" id="trunkSpaceValue">0 L</div>
+            </div>
+        </div>
+        
         <div id="noResults" class="no-results" style="display: none;">
-            No cars match the filter. Try adjusting the minimum range.
+            No cars match the current filters. Try adjusting the minimum range or trunk space.
         </div>
         
         <div class="table-container" id="tableContainer" style="display: none;">
@@ -405,10 +413,13 @@
         let allCarData = [];
         let rangeSlider;
         let rangeValue;
+        let trunkSpaceSlider;
+        let trunkSpaceValue;
         let tableContainer;
         let carsTableBody;
         let noResults;
         let rangeFilter;
+        let trunkSpaceFilter;
 
         // Function to create a table row element
         function createTableRow(car) {
@@ -435,10 +446,14 @@
         // Function to filter and display cars
         function filterAndDisplayCars() {
             const minRange = parseInt(rangeSlider.value);
-            const filteredCars = allCarData.filter(car => car.range_km >= minRange);
+            const minTrunkSpace = parseInt(trunkSpaceSlider.value);
+            const filteredCars = allCarData.filter(car => 
+                car.range_km >= minRange && car.trunk_space_liters >= minTrunkSpace
+            );
             
-            // Update range value display
+            // Update value displays
             rangeValue.textContent = `${formatNumber(minRange)} km`;
+            trunkSpaceValue.textContent = `${formatNumber(minTrunkSpace)} L`;
             
             // Clear table body
             carsTableBody.innerHTML = '';
@@ -457,6 +472,28 @@
                 noResults.style.display = 'none';
                 tableContainer.style.display = 'block';
             }
+        }
+
+        // Function to initialize the trunk space slider
+        function initializeTrunkSpaceSlider() {
+            // Calculate min and max trunk space from data
+            const trunkSpaces = allCarData.map(car => car.trunk_space_liters);
+            const minTrunkSpace = Math.min(...trunkSpaces);
+            const maxTrunkSpace = Math.max(...trunkSpaces);
+            
+            // Set up slider
+            trunkSpaceSlider.min = minTrunkSpace;
+            trunkSpaceSlider.max = maxTrunkSpace;
+            trunkSpaceSlider.value = minTrunkSpace;
+            
+            // Initial display
+            filterAndDisplayCars();
+            
+            // Add event listener for slider changes
+            trunkSpaceSlider.addEventListener('input', filterAndDisplayCars);
+            
+            // Show the trunk space filter
+            trunkSpaceFilter.style.display = 'block';
         }
 
         // Function to initialize the range slider
@@ -493,6 +530,9 @@
             rangeFilter = document.getElementById('rangeFilter');
             rangeSlider = document.getElementById('rangeSlider');
             rangeValue = document.getElementById('rangeValue');
+            trunkSpaceFilter = document.getElementById('trunkSpaceFilter');
+            trunkSpaceSlider = document.getElementById('trunkSpaceSlider');
+            trunkSpaceValue = document.getElementById('trunkSpaceValue');
 
             try {
                 // Fetch the stats.json file
@@ -504,8 +544,9 @@
                 
                 allCarData = await response.json();
                 
-                // Initialize the range slider and display cars
+                // Initialize both sliders and display cars
                 initializeRangeSlider();
+                initializeTrunkSpaceSlider();
                 
                 // Hide loading
                 loadingDiv.style.display = 'none';
