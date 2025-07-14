@@ -30,6 +30,7 @@ The application now supports displaying car images from URLs. To add an image to
   "price_usd": 40000,
   "trunk_space_liters": 425,
   "horse_power": 283,
+  "trailer_hitch": "yes",
   "image_url": "https://example.com/tesla-model-3.jpg"
 }
 ```
@@ -44,7 +45,8 @@ The application now supports displaying car images from URLs. To add an image to
   "range_km": 430,
   "price_usd": 40000,
   "trunk_space_liters": 425,
-  "horse_power": 283
+  "horse_power": 283,
+  "trailer_hitch": "yes"
 }
 ```
 
@@ -74,6 +76,7 @@ Each car entry in `stats.json` supports the following fields:
 - `price_usd` (required): Price in USD
 - `trunk_space_liters` (required): Trunk space in liters
 - `horse_power` (required): Horsepower
+- `trailer_hitch` (required): Trailer hitch availability ("yes" or "no")
 - `image_url` (optional): URL to car image
 
 ## Browser Support
