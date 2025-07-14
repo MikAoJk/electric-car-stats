@@ -123,6 +123,77 @@
             margin: 20px 0;
         }
         
+        .range-filter {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .range-filter h3 {
+            color: #333;
+            margin: 0 0 15px 0;
+            font-size: 1.1rem;
+        }
+        
+        .range-slider-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .range-slider {
+            flex: 1;
+            height: 8px;
+            border-radius: 4px;
+            background: #e0e0e0;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .range-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .range-value {
+            font-weight: bold;
+            color: #4CAF50;
+            font-size: 1.1rem;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 1.1rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            margin: 20px 0;
+        }
+        
         /* Responsive design */
         @media (max-width: 768px) {
             body {
@@ -174,6 +245,19 @@
         <h1>Electric Car Stats</h1>
         <div id="loading" class="loading">Loading car data...</div>
         <div id="error" class="error" style="display: none;"></div>
+        
+        <div class="range-filter" id="rangeFilter" style="display: none;">
+            <h3>Filter by Minimum Range</h3>
+            <div class="range-slider-container">
+                <input type="range" id="rangeSlider" class="range-slider" min="0" max="1000" value="0">
+                <div class="range-value" id="rangeValue">0 km</div>
+            </div>
+        </div>
+        
+        <div id="noResults" class="no-results" style="display: none;">
+            No cars match the filter. Try adjusting the minimum range.
+        </div>
+        
         <div class="cards-container" id="cardsContainer" style="display: none;">
         </div>
     </div>
@@ -194,11 +278,108 @@
             return new Intl.NumberFormat('en-US').format(num);
         }
 
+        // Global variables
+        let allCarData = [];
+        let rangeSlider;
+        let rangeValue;
+        let cardsContainer;
+        let noResults;
+        let rangeFilter;
+
+        // Function to create a car card element
+        function createCarCard(car) {
+            const cardElement = document.createElement('div');
+            cardElement.className = 'car-card';
+            cardElement.setAttribute('data-range', car.range_km);
+            
+            cardElement.innerHTML = `
+                <div class="car-header">
+                    <div class="car-title">${car.make} ${car.model}</div>
+                    <div class="car-year">${car.year}</div>
+                </div>
+                <div class="car-specs">
+                    <div class="spec-item">
+                        <div class="spec-label">Range</div>
+                        <div class="spec-value range">${formatNumber(car.range_km)} km</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Price</div>
+                        <div class="spec-value price">${formatCurrency(car.price_usd)}</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Trunk Space</div>
+                        <div class="spec-value">${formatNumber(car.trunk_space_liters)} L</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Horsepower</div>
+                        <div class="spec-value power">${formatNumber(car.horse_power)} HP</div>
+                    </div>
+                </div>
+            `;
+            
+            return cardElement;
+        }
+
+        // Function to filter and display cars
+        function filterAndDisplayCars() {
+            const minRange = parseInt(rangeSlider.value);
+            const filteredCars = allCarData.filter(car => car.range_km >= minRange);
+            
+            // Update range value display
+            rangeValue.textContent = `${formatNumber(minRange)} km`;
+            
+            // Clear container
+            cardsContainer.innerHTML = '';
+            
+            if (filteredCars.length === 0) {
+                // Show no results message
+                noResults.style.display = 'block';
+                cardsContainer.style.display = 'none';
+            } else {
+                // Show filtered cars
+                filteredCars.forEach(car => {
+                    const cardElement = createCarCard(car);
+                    cardsContainer.appendChild(cardElement);
+                });
+                
+                noResults.style.display = 'none';
+                cardsContainer.style.display = 'grid';
+            }
+        }
+
+        // Function to initialize the range slider
+        function initializeRangeSlider() {
+            // Calculate min and max range from data
+            const ranges = allCarData.map(car => car.range_km);
+            const minRange = Math.min(...ranges);
+            const maxRange = Math.max(...ranges);
+            
+            // Set up slider
+            rangeSlider.min = minRange;
+            rangeSlider.max = maxRange;
+            rangeSlider.value = minRange;
+            
+            // Initial display
+            filterAndDisplayCars();
+            
+            // Add event listener for slider changes
+            rangeSlider.addEventListener('input', filterAndDisplayCars);
+            
+            // Show the range filter
+            rangeFilter.style.display = 'block';
+        }
+
         // Function to load and display car data
         async function loadCarData() {
             const loadingDiv = document.getElementById('loading');
             const errorDiv = document.getElementById('error');
-            const cardsContainer = document.getElementById('cardsContainer');
+            
+            // Get DOM elements
+            cardsContainer = document.getElementById('cardsContainer');
+            noResults = document.getElementById('noResults');
+            rangeFilter = document.getElementById('rangeFilter');
+            rangeSlider = document.getElementById('rangeSlider');
+            rangeValue = document.getElementById('rangeValue');
 
             try {
                 // Fetch the stats.json file
@@ -208,47 +389,13 @@
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 
-                const carData = await response.json();
+                allCarData = await response.json();
                 
-                // Clear existing cards
-                cardsContainer.innerHTML = '';
+                // Initialize the range slider and display cars
+                initializeRangeSlider();
                 
-                // Create cards for each car
-                carData.forEach(car => {
-                    const cardElement = document.createElement('div');
-                    cardElement.className = 'car-card';
-                    
-                    cardElement.innerHTML = `
-                        <div class="car-header">
-                            <div class="car-title">${car.make} ${car.model}</div>
-                            <div class="car-year">${car.year}</div>
-                        </div>
-                        <div class="car-specs">
-                            <div class="spec-item">
-                                <div class="spec-label">Range</div>
-                                <div class="spec-value range">${formatNumber(car.range_km)} km</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">Price</div>
-                                <div class="spec-value price">${formatCurrency(car.price_usd)}</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">Trunk Space</div>
-                                <div class="spec-value">${formatNumber(car.trunk_space_liters)} L</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">Horsepower</div>
-                                <div class="spec-value power">${formatNumber(car.horse_power)} HP</div>
-                            </div>
-                        </div>
-                    `;
-                    
-                    cardsContainer.appendChild(cardElement);
-                });
-                
-                // Hide loading, show cards
+                // Hide loading
                 loadingDiv.style.display = 'none';
-                cardsContainer.style.display = 'grid';
                 
             } catch (error) {
                 console.error('Error loading car data:', error);
