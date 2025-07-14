@@ -20,16 +20,6 @@
     "weight_kg": 2393
   },
   {
-    "make": "Hyundai",
-    "model": "IONIQ 5",
-    "year": 2024,
-    "range_km": 488,
-    "price_usd": 48500,
-    "trunk_space_liters": 531,
-    "horse_power": 225,
-    "weight_kg": 1830
-  },
-  {
     "make": "Tesla",
     "model": "Model Y",
     "year": 2024,
@@ -38,16 +28,6 @@
     "trunk_space_liters": 854,
     "horse_power": 384,
     "weight_kg": 1900
-  },
-  {
-    "make": "Volkswagen",
-    "model": "ID.4",
-    "year": 2024,
-    "range_km": 520,
-    "price_usd": 45000,
-    "trunk_space_liters": 543,
-    "horse_power": 201,
-    "weight_kg": 1954
   },
   {
     "make": "Skoda",
