@@ -78,6 +78,10 @@
             gap: 15px;
         }
         
+        .car-specs.five-items {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
         .spec-item {
             display: flex;
             flex-direction: column;
@@ -106,6 +110,10 @@
         
         .spec-value.power {
             color: #d32f2f;
+        }
+        
+        .spec-value.weight {
+            color: #795548;
         }
         
         .loading {
@@ -228,6 +236,10 @@
                 gap: 10px;
             }
             
+            .car-specs.five-items {
+                grid-template-columns: 1fr;
+            }
+            
             .car-header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -292,12 +304,15 @@
             cardElement.className = 'car-card';
             cardElement.setAttribute('data-range', car.range_km);
             
+            // Check if weight_kg exists, if not show 'N/A'
+            const weightDisplay = car.weight_kg ? `${formatNumber(car.weight_kg)} kg` : 'N/A';
+            
             cardElement.innerHTML = `
                 <div class="car-header">
                     <div class="car-title">${car.make} ${car.model}</div>
                     <div class="car-year">${car.year}</div>
                 </div>
-                <div class="car-specs">
+                <div class="car-specs five-items">
                     <div class="spec-item">
                         <div class="spec-label">Range</div>
                         <div class="spec-value range">${formatNumber(car.range_km)} km</div>
@@ -305,6 +320,10 @@
                     <div class="spec-item">
                         <div class="spec-label">Price</div>
                         <div class="spec-value price">${formatCurrency(car.price_usd)}</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Weight</div>
+                        <div class="spec-value weight">${weightDisplay}</div>
                     </div>
                     <div class="spec-item">
                         <div class="spec-label">Trunk Space</div>
