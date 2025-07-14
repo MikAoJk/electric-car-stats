@@ -1,15 +1,7 @@
 [
   { "make": "Audi", "model": "e-tron", "year": 2024, "range_km": 436, "price_usd": 75000, "trunk_space_liters": 660, "horse_power": 355 },
   { "make": "Peugeot", "model": "E-5008", "year": 2024, "range_km": 560, "price_usd": 69700, "trunk_space_liters": 748, "horse_power": 231 },
-  { 
-  "make": "CUPRA", 
-  "model": "Tavascan", 
-  "year": 2024, 
-  "range_km": 569, 
-  "price_usd": 67000, 
-  "trunk_space_liters": 540, 
-  "horse_power": 340 
-  },
+  { "make": "CUPRA", "model": "Tavascan", "year": 2024, "range_km": 569, "price_usd": 67000, "trunk_space_liters": 540, "horse_power": 340 },
   { "make": "Volkswagen", "model": "ID. Buzz", "year": 2024, "range_km": 420, "price_usd": 65000, "trunk_space_liters": 1121, "horse_power": 282 },
   { "make": "Xpeng", "model": "G9", "year": 2024, "range_km": 650, "price_usd": 56700, "trunk_space_liters": 660, "horse_power": 551 },
   { "make": "Polestar", "model": "2", "year": 2024, "range_km": 540, "price_usd": 50000, "trunk_space_liters": 405, "horse_power": 231 },
