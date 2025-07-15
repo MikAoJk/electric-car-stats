@@ -417,7 +417,7 @@
                         <th>Model</th>
                         <th>Year</th>
                         <th class="sortable" data-column="range">Range (km)</th>
-                        <th class="sortable" data-column="price">Price (USD)</th>
+                        <th class="sortable" data-column="price">Price</th>
                         <th class="sortable" data-column="weight">Weight (kg)</th>
                         <th class="sortable" data-column="trunk_space">Trunk Space (L)</th>
                         <th class="sortable" data-column="horsepower">Horsepower (HP)</th>
@@ -431,10 +431,11 @@
 
     <script>
         // Function to format currency
-        function formatCurrency(amount) {
-            return new Intl.NumberFormat('en-US', {
+        function formatCurrency(amount, currency = 'USD') {
+            const locale = currency === 'NOK' ? 'nb-NO' : 'en-US';
+            return new Intl.NumberFormat(locale, {
                 style: 'currency',
-                currency: 'USD',
+                currency: currency,
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
             }).format(amount);
@@ -445,13 +446,24 @@
             return new Intl.NumberFormat('en-US').format(num);
         }
 
+        // Function to get the price and currency for a car
+        function getCarPrice(car) {
+            if (car.year === 2025 && car.price_nok) {
+                return { amount: car.price_nok, currency: 'NOK' };
+            } else if (car.price_usd) {
+                return { amount: car.price_usd, currency: 'USD' };
+            }
+            return { amount: 0, currency: 'USD' };
+        }
+
         // Function to get the value for sorting from a car object
         function getSortValue(car, column) {
             switch(column) {
                 case 'range':
                     return car.range_km;
                 case 'price':
-                    return car.price_usd;
+                    const priceData = getCarPrice(car);
+                    return priceData.amount;
                 case 'weight':
                     return car.weight_kg || 0; // Handle missing weight
                 case 'trunk_space':
@@ -535,12 +547,16 @@
             // Handle missing weight_kg field
             const weight = car.weight_kg ? formatNumber(car.weight_kg) : 'N/A';
             
+            // Get price and currency for this car
+            const priceData = getCarPrice(car);
+            const formattedPrice = formatCurrency(priceData.amount, priceData.currency);
+            
             rowElement.innerHTML = `
                 <td class="brand-model">${car.make}</td>
                 <td class="brand-model">${car.model}</td>
                 <td><span class="year">${car.year}</span></td>
                 <td class="range">${formatNumber(car.range_km)}</td>
-                <td class="price">${formatCurrency(car.price_usd)}</td>
+                <td class="price">${formattedPrice}</td>
                 <td class="weight">${weight}</td>
                 <td>${formatNumber(car.trunk_space_liters)}</td>
                 <td class="power">${formatNumber(car.horse_power)}</td>
@@ -653,7 +669,10 @@
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 
-                allCarData = await response.json();
+                const jsonData = await response.json();
+                
+                // Extract cars array from the response, handling both old and new formats
+                allCarData = jsonData.cars || jsonData;
                 
                 // Initialize both sliders and display cars
                 initializeRangeSlider();
