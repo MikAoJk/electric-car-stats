@@ -448,7 +448,7 @@
 
         // Function to get the price and currency for a car
         function getCarPrice(car) {
-            if (car.year === 2025 && car.price_nok) {
+            if (car.price_nok) {
                 return { amount: car.price_nok, currency: 'NOK' };
             } else if (car.price_usd) {
                 return { amount: car.price_usd, currency: 'USD' };
