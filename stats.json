@@ -5,5 +5,6 @@
   { "make": "Tesla", "model": "Model Y", "year": 2024, "range_km": 533, "price_usd": 47990, "trunk_space_liters": 854, "horse_power": 384, "weight_kg": 1900 },
   { "make": "Volkswagen", "model": "ID.4", "year": 2024, "range_km": 520, "price_usd": 45000, "trunk_space_liters": 543, "horse_power": 201, "weight_kg": 1954 },
   { "make": "Skoda", "model": "Enyaq", "year": 2024, "range_km": 530, "price_usd": 45000, "trunk_space_liters": 585, "horse_power": 201, "weight_kg": 1937 },
-  { "make": "Kia", "model": "EV6", "year": 2024, "range_km": 528, "price_usd": 42000, "trunk_space_liters": 490, "horse_power": 225, "weight_kg": 1807 }
+  { "make": "Kia", "model": "EV6", "year": 2024, "range_km": 528, "price_usd": 42000, "trunk_space_liters": 490, "horse_power": 225, "weight_kg": 1807 },
+  { "make": "Global Average", "model": "EV", "year": 2025, "range_km": 560, "price_usd": 47000, "trunk_space_liters": 700, "horse_power": 300, "weight_kg": 2000 }
 ]
