@@ -5,5 +5,6 @@
   { "make": "Tesla", "model": "Model Y", "range_km": 533, "price_usd": 47990, "trunk_space_liters": 854, "horse_power": 384 },
   { "make": "Volkswagen", "model": "ID.4", "range_km": 520, "price_usd": 45000, "trunk_space_liters": 543, "horse_power": 201 },
   { "make": "Skoda", "model": "Enyaq", "range_km": 530, "price_usd": 45000, "trunk_space_liters": 585, "horse_power": 201 },
-  { "make": "Kia", "model": "EV6", "range_km": 528, "price_usd": 42000, "trunk_space_liters": 490, "horse_power": 225 }
+  { "make": "Kia", "model": "EV6", "range_km": 528, "price_usd": 42000, "trunk_space_liters": 490, "horse_power": 225 },
+  { "make": "Kia", "model": "EV9", "range_km": 489, "price_usd": 70000, "trunk_space_liters": 571, "horse_power": 379 }
 ]
