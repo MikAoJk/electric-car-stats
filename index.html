@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electric Car Stats 2024</title>
+    <title>Electric Car Stats</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,15 +61,6 @@
             font-size: 1.25rem;
             font-weight: bold;
             color: #333;
-        }
-        
-        .car-year {
-            background: #4CAF50;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: bold;
         }
         
         .car-specs {
@@ -272,16 +263,6 @@
             color: #333;
         }
         
-        .cars-table .year {
-            background: #4CAF50;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-        }
-        
         .cars-table .range {
             color: #1976d2;
             font-weight: 600;
@@ -373,10 +354,6 @@
             .cars-table th {
                 font-size: 0.7rem;
             }
-            
-            .year {
-                font-size: 0.7rem !important;
-            }
         }
     </style>
 </head>
@@ -412,7 +389,6 @@
                     <tr>
                         <th>Brand</th>
                         <th>Model</th>
-                        <th>Year</th>
                         <th class="sortable" data-column="range">Range (km)</th>
                         <th class="sortable" data-column="price">Price (USD)</th>
                         <th class="sortable" data-column="trunk_space">Trunk Space (L)</th>
@@ -529,7 +505,6 @@
             rowElement.innerHTML = `
                 <td class="brand-model">${car.make}</td>
                 <td class="brand-model">${car.model}</td>
-                <td><span class="year">${car.year}</span></td>
                 <td class="range">${formatNumber(car.range_km)}</td>
                 <td class="price">${formatCurrency(car.price_usd)}</td>
                 <td>${formatNumber(car.trunk_space_liters)}</td>
