@@ -292,10 +292,7 @@
             font-weight: 600;
         }
         
-        .cars-table .weight {
-            color: #d32f2f;
-            font-weight: 600;
-        }
+
         
         .cars-table .power {
             color: #d32f2f;
@@ -418,7 +415,6 @@
                         <th>Year</th>
                         <th class="sortable" data-column="range">Range (km)</th>
                         <th class="sortable" data-column="price">Price (USD)</th>
-                        <th class="sortable" data-column="weight">Weight (kg)</th>
                         <th class="sortable" data-column="trunk_space">Trunk Space (L)</th>
                         <th class="sortable" data-column="horsepower">Horsepower (HP)</th>
                     </tr>
@@ -452,8 +448,6 @@
                     return car.range_km;
                 case 'price':
                     return car.price_usd;
-                case 'weight':
-                    return car.weight_kg || 0; // Handle missing weight
                 case 'trunk_space':
                     return car.trunk_space_liters;
                 case 'horsepower':
@@ -532,16 +526,12 @@
             const rowElement = document.createElement('tr');
             rowElement.setAttribute('data-range', car.range_km);
             
-            // Handle missing weight_kg field
-            const weight = car.weight_kg ? formatNumber(car.weight_kg) : 'N/A';
-            
             rowElement.innerHTML = `
                 <td class="brand-model">${car.make}</td>
                 <td class="brand-model">${car.model}</td>
                 <td><span class="year">${car.year}</span></td>
                 <td class="range">${formatNumber(car.range_km)}</td>
                 <td class="price">${formatCurrency(car.price_usd)}</td>
-                <td class="weight">${weight}</td>
                 <td>${formatNumber(car.trunk_space_liters)}</td>
                 <td class="power">${formatNumber(car.horse_power)}</td>
             `;
