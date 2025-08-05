@@ -1,13 +1,13 @@
 [
-  { "make": "Audi", "model": "e-tron", "range_km": 436, "price_usd": 75000, "trunk_space_liters": 660, "horse_power": 355 },
-  { "make": "Volkswagen", "model": "ID. Buzz", "range_km": 420, "price_usd": 65000, "trunk_space_liters": 1121, "horse_power": 282 },
-  { "make": "Hyundai", "model": "IONIQ 5", "range_km": 488, "price_usd": 48500, "trunk_space_liters": 531, "horse_power": 225 },
-  { "make": "Tesla", "model": "Model Y", "range_km": 533, "price_usd": 47990, "trunk_space_liters": 854, "horse_power": 384 },
-  { "make": "Volkswagen", "model": "ID.4", "range_km": 520, "price_usd": 45000, "trunk_space_liters": 543, "horse_power": 201 },
-  { "make": "Skoda", "model": "Enyaq", "range_km": 530, "price_usd": 45000, "trunk_space_liters": 585, "horse_power": 201 },
-  { "make": "Kia", "model": "EV6", "range_km": 528, "price_usd": 42000, "trunk_space_liters": 490, "horse_power": 225 },
-  { "make": "Opel", "model": "Grandland", "range_km": 450, "price_usd": 50000, "trunk_space_liters": 600, "horse_power": 250 },
-  { "make": "BYD", "model": "Sealion 7", "range_km": 500, "price_usd": 48000, "trunk_space_liters": 550, "horse_power": 360 },
-  { "make": "XPeng", "model": "G9", "range_km": 570, "price_usd": 60000, "trunk_space_liters": 660, "horse_power": 551 },
-  { "make": "Kia", "model": "EV9", "range_km": 489, "price_usd": 65000, "trunk_space_liters": 828, "horse_power": 379 }
+  { "make": "Audi", "model": "e-tron", "range_km": 436, "trunk_space_liters": 660, "horse_power": 355 },
+  { "make": "Volkswagen", "model": "ID. Buzz", "range_km": 420, "trunk_space_liters": 1121, "horse_power": 282 },
+  { "make": "Hyundai", "model": "IONIQ 5", "range_km": 488, "trunk_space_liters": 531, "horse_power": 225 },
+  { "make": "Tesla", "model": "Model Y", "range_km": 533, "trunk_space_liters": 854, "horse_power": 384 },
+  { "make": "Volkswagen", "model": "ID.4", "range_km": 520, "trunk_space_liters": 543, "horse_power": 201 },
+  { "make": "Skoda", "model": "Enyaq", "range_km": 530, "trunk_space_liters": 585, "horse_power": 201 },
+  { "make": "Kia", "model": "EV6", "range_km": 528, "trunk_space_liters": 490, "horse_power": 225 },
+  { "make": "Opel", "model": "Grandland", "range_km": 450, "trunk_space_liters": 600, "horse_power": 250 },
+  { "make": "BYD", "model": "Sealion 7", "range_km": 500, "trunk_space_liters": 550, "horse_power": 360 },
+  { "make": "XPeng", "model": "G9", "range_km": 570, "trunk_space_liters": 660, "horse_power": 551 },
+  { "make": "Kia", "model": "EV9", "range_km": 489, "trunk_space_liters": 828, "horse_power": 379 }
 ]
