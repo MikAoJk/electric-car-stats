@@ -6,5 +6,6 @@
   { "make": "Volkswagen", "model": "ID.4", "range_km": 520, "price_usd": 45000, "trunk_space_liters": 543, "horse_power": 201 },
   { "make": "Skoda", "model": "Enyaq", "range_km": 530, "price_usd": 45000, "trunk_space_liters": 585, "horse_power": 201 },
   { "make": "Kia", "model": "EV6", "range_km": 528, "price_usd": 42000, "trunk_space_liters": 490, "horse_power": 225 },
+  { "make": "Opel", "model": "Grandland", "range_km": 450, "price_usd": 50000, "trunk_space_liters": 600, "horse_power": 250 },
   { "make": "Hongqi", "model": "EHS7", "range_km": 460, "price_usd": 65000, "trunk_space_liters": 600, "horse_power": 400 }
 ]
