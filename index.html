@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electric Car Stats 2024</title>
+    <title>Electric Car Stats</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -352,7 +352,7 @@
                         <th>Brand</th>
                         <th>Model</th>
                         <th class="sortable" data-column="range">Range (km)</th>
-                        <th class="sortable" data-column="price">Price (USD)</th>
+                        <th class="sortable" data-column="price">Price (NOK)</th>
                         <th class="sortable" data-column="trunk_space">Trunk Space (L)</th>
                         <th class="sortable" data-column="horsepower">Horsepower (HP)</th>
                     </tr>
@@ -366,9 +366,9 @@
     <script>
         // Function to format currency
         function formatCurrency(amount) {
-            return new Intl.NumberFormat('en-US', {
+            return new Intl.NumberFormat('nb-NO', {
                 style: 'currency',
-                currency: 'USD',
+                currency: 'NOK',
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
             }).format(amount);
@@ -376,7 +376,7 @@
 
         // Function to format numbers with commas
         function formatNumber(num) {
-            return new Intl.NumberFormat('en-US').format(num);
+            return new Intl.NumberFormat('nb-NO').format(num);
         }
 
         // Function to get the value for sorting from a car object
@@ -385,7 +385,7 @@
                 case 'range':
                     return car.range_km;
                 case 'price':
-                    return car.price_usd;
+                    return car.price_nok;
                 case 'trunk_space':
                     return car.trunk_space_liters;
                 case 'horsepower':
@@ -468,7 +468,7 @@
                 <td class="brand-model">${car.make}</td>
                 <td class="brand-model">${car.model}</td>
                 <td class="range">${formatNumber(car.range_km)}</td>
-                <td class="price">${formatCurrency(car.price_usd)}</td>
+                <td class="price">${formatCurrency(car.price_mok)}</td>
                 <td>${formatNumber(car.trunk_space_liters)}</td>
                 <td class="power">${formatNumber(car.horse_power)}</td>
             `;
