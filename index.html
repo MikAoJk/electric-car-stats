@@ -261,11 +261,6 @@
             font-weight: 600;
         }
         
-        .cars-table .power {
-            color: #d32f2f;
-            font-weight: 600;
-        }
-        
         /* Responsive design */
         @media (max-width: 768px) {
             body {
@@ -354,7 +349,7 @@
                         <th class="sortable" data-column="range">Range (km)</th>
                         <th class="sortable" data-column="price">Price (NOK)</th>
                         <th class="sortable" data-column="trunk_space">Trunk Space (L)</th>
-                        <th class="sortable" data-column="horsepower">Horsepower (HP)</th>
+
                     </tr>
                 </thead>
                 <tbody id="carsTableBody">
@@ -388,8 +383,6 @@
                     return car.price_nok;
                 case 'trunk_space':
                     return car.trunk_space_liters;
-                case 'horsepower':
-                    return car.horse_power;
                 default:
                     return 0;
             }
@@ -470,7 +463,6 @@
                 <td class="range">${formatNumber(car.range_km)}</td>
                 <td class="price">${formatCurrency(car.price_nok)}</td>
                 <td>${formatNumber(car.trunk_space_liters)}</td>
-                <td class="power">${formatNumber(car.horse_power)}</td>
             `;
             
             return rowElement;
