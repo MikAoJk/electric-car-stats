@@ -75,5 +75,12 @@
     "range_km": 530,
     "price_nok": 650000,
     "trunk_space_liters": 526
+  },
+  {
+    "make": "Renault",
+    "model": "Scenic E-Tech Electric",
+    "range_km": 622,
+    "price_nok": 502075,
+    "trunk_space_liters": 545
   }
 ]
