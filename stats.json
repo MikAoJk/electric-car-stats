@@ -68,5 +68,12 @@
     "range_km": 570,
     "price_nok": 549900,
     "trunk_space_liters": 660
+  },
+  {
+    "make": "Polestar",
+    "model": "4",
+    "range_km": 530,
+    "price_nok": 650000,
+    "trunk_space_liters": 526
   }
 ]
