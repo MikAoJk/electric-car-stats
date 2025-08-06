@@ -47,7 +47,14 @@
   "range_km": 527,
   "price_nok": 470000,
   "trunk_space_liters": 520
-  }
+  },
+  {
+  "make": "Peugeot",
+  "model": "E-5008",
+  "range_km": 502,
+  "price_nok": 540000,
+  "trunk_space_liters": 748
+  },
   {
     "make": "Tesla",
     "model": "Model Y",
