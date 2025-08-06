@@ -21,6 +21,13 @@
     "trunk_space_liters": 490
   },
   {
+    "make": "MG",
+    "model": "IM6",
+    "range_km": 555,
+    "price_nok": 489900,
+    "trunk_space_liters": 665
+  },
+  {
     "make": "Nissan",
     "model": "Ariya",
     "range_km": 533,
