@@ -35,6 +35,13 @@
     "trunk_space_liters": 828
   },
   {
+    "make": "Nissan",
+    "model": "Ariya",
+    "range_km": 533,
+    "price_nok": 429900,
+    "trunk_space_liters": 466
+  },
+  {
     "make": "Opel",
     "model": "Grandland",
     "range_km": 524,
