@@ -35,25 +35,39 @@
     "trunk_space_liters": 600
   },
   {
+    "make": "Peugeot",
+    "model": "E-3008",
+    "range_km": 527,
+    "price_nok": 470000,
+    "trunk_space_liters": 520
+  },
+  {
+    "make": "Peugeot",
+    "model": "E-5008",
+    "range_km": 502,
+    "price_nok": 540000,
+    "trunk_space_liters": 748
+  },
+  {
+    "make": "Polestar",
+    "model": "4",
+    "range_km": 530,
+    "price_nok": 650000,
+    "trunk_space_liters": 526
+  },
+  {
+    "make": "Renault",
+    "model": "Scenic E-Tech Electric",
+    "range_km": 622,
+    "price_nok": 502075,
+    "trunk_space_liters": 545
+  },
+  {
     "make": "Skoda",
     "model": "Enyaq",
     "range_km": 530,
     "price_nok": 417550,
     "trunk_space_liters": 585
-  },
-  {
-  "make": "Peugeot",
-  "model": "E-3008",
-  "range_km": 527,
-  "price_nok": 470000,
-  "trunk_space_liters": 520
-  },
-  {
-  "make": "Peugeot",
-  "model": "E-5008",
-  "range_km": 502,
-  "price_nok": 540000,
-  "trunk_space_liters": 748
   },
   {
     "make": "Tesla",
@@ -82,19 +96,5 @@
     "range_km": 570,
     "price_nok": 549900,
     "trunk_space_liters": 660
-  },
-  {
-    "make": "Polestar",
-    "model": "4",
-    "range_km": 530,
-    "price_nok": 650000,
-    "trunk_space_liters": 526
-  },
-  {
-    "make": "Renault",
-    "model": "Scenic E-Tech Electric",
-    "range_km": 622,
-    "price_nok": 502075,
-    "trunk_space_liters": 545
   }
 ]
