@@ -6,8 +6,8 @@
   { "make": "Volkswagen", "model": "ID.4", "range_km": 520, "price_nok": 437800, "trunk_space_liters": 543 },
   { "make": "Skoda", "model": "Enyaq", "range_km": 530, "price_nok": 417550, "trunk_space_liters": 585 },
   { "make": "Kia", "model": "EV6", "range_km": 528, "price_nok": 449900, "trunk_space_liters": 490 },
-  { "make": "Opel", "model": "Grandland", "range_km": 450, "price_nok": 50000, "trunk_space_liters": 600 },
-  { "make": "BYD", "model": "Sealion 7", "range_km": 500, "price_nok": 48000, "trunk_space_liters": 550 },
+  { "make": "Opel", "model": "Grandland", "range_km": 450, "price_nok": 438000, "trunk_space_liters": 600 },
+  { "make": "BYD", "model": "Sealion 7", "range_km": 500, "price_nok": 469900, "trunk_space_liters": 550 },
   { "make": "XPeng", "model": "G9", "range_km": 570, "price_nok": 60000, "trunk_space_liters": 660 },
   { "make": "Kia", "model": "EV9", "range_km": 489, "price_nok": 65000, "trunk_space_liters": 828 }
 ]
