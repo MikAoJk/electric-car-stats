@@ -1,5 +1,5 @@
 [
-  { "make": "Audi", "model": "e-tron", "range_km": 436, "price_nok": 75000, "trunk_space_liters": 660 },
+  { "make": "Audi", "model": "A6 e-tron", "range_km": 680, "price_nok": 679900, "trunk_space_liters": 502 },
   { "make": "Volkswagen", "model": "ID. Buzz", "range_km": 420, "price_nok": 65000, "trunk_space_liters": 1121 },
   { "make": "Hyundai", "model": "IONIQ 5", "range_km": 488, "price_nok": 48500, "trunk_space_liters": 531 },
   { "make": "Tesla", "model": "Model Y", "range_km": 533, "price_nok": 47990, "trunk_space_liters": 854 },
