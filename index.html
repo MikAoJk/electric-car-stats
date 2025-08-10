@@ -361,6 +361,9 @@
     <script>
         // Function to format currency
         function formatCurrency(amount) {
+            if (amount === null || amount === undefined) {
+                return 'N/A';
+            }
             return new Intl.NumberFormat('nb-NO', {
                 style: 'currency',
                 currency: 'NOK',
@@ -371,6 +374,9 @@
 
         // Function to format numbers with commas
         function formatNumber(num) {
+            if (num === null || num === undefined) {
+                return 'N/A';
+            }
             return new Intl.NumberFormat('nb-NO').format(num);
         }
 
@@ -393,6 +399,11 @@
             return cars.sort((a, b) => {
                 const aValue = getSortValue(a, column);
                 const bValue = getSortValue(b, column);
+                
+                // Handle null values in sorting - put nulls at the end
+                if (aValue === null && bValue === null) return 0;
+                if (aValue === null) return 1;
+                if (bValue === null) return -1;
                 
                 if (direction === 'asc') {
                     return aValue - bValue;
@@ -472,9 +483,12 @@
         function filterAndDisplayCars() {
             const minRange = parseInt(rangeSlider.value);
             const minTrunkSpace = parseInt(trunkSpaceSlider.value);
-            let filteredCars = allCarData.filter(car => 
-                car.range_km >= minRange && car.trunk_space_liters >= minTrunkSpace
-            );
+            let filteredCars = allCarData.filter(car => {
+                // Handle null values: include them only if filter is at minimum value
+                const rangeMatches = car.range_km === null ? minRange === parseInt(rangeSlider.min) : car.range_km >= minRange;
+                const trunkSpaceMatches = car.trunk_space_liters === null ? minTrunkSpace === parseInt(trunkSpaceSlider.min) : car.trunk_space_liters >= minTrunkSpace;
+                return rangeMatches && trunkSpaceMatches;
+            });
             
             // Apply sorting if a column is selected
             if (currentSortColumn) {
@@ -506,8 +520,8 @@
 
         // Function to initialize the trunk space slider
         function initializeTrunkSpaceSlider() {
-            // Calculate min and max trunk space from data
-            const trunkSpaces = allCarData.map(car => car.trunk_space_liters);
+            // Calculate min and max trunk space from data, filtering out null values
+            const trunkSpaces = allCarData.map(car => car.trunk_space_liters).filter(space => space !== null);
             const minTrunkSpace = Math.min(...trunkSpaces);
             const maxTrunkSpace = Math.max(...trunkSpaces);
             
@@ -528,8 +542,8 @@
 
         // Function to initialize the range slider
         function initializeRangeSlider() {
-            // Calculate min and max range from data
-            const ranges = allCarData.map(car => car.range_km);
+            // Calculate min and max range from data, filtering out null values
+            const ranges = allCarData.map(car => car.range_km).filter(range => range !== null);
             const minRange = Math.min(...ranges);
             const maxRange = Math.max(...ranges);
             
