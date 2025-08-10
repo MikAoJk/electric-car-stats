@@ -7,6 +7,13 @@
     "trunk_space_liters": 550
   },
   {
+    "make": "CUPRA",
+    "model": "Tavascan",
+    "range_km": 516,
+    "price_nok": 489900,
+    "trunk_space_liters": 540
+  },
+  {
     "make": "Hyundai",
     "model": "IONIQ 5",
     "range_km": 570,
