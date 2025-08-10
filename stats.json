@@ -103,5 +103,12 @@
     "range_km": 570,
     "price_nok": 549900,
     "trunk_space_liters": 660
+  },
+  {
+    "make": "Peugeot",
+    "model": "e-Traveller",
+    "range_km": null,
+    "price_nok": null,
+    "trunk_space_liters": null
   }
 ]
