@@ -35,6 +35,13 @@
     "trunk_space_liters": 665
   },
   {
+    "make": "Mercedes",
+    "model": "EQB 250+",
+    "range_km": 530,
+    "price_nok": 534517,
+    "trunk_space_liters": 495
+  },
+  {
     "make": "Nissan",
     "model": "Ariya",
     "range_km": 533,
