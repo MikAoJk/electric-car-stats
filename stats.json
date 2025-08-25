@@ -91,6 +91,13 @@
     "trunk_space_liters": 585
   },
   {
+    "make": "Smart",
+    "model": "#5",
+    "range_km": 540,
+    "price_nok": 499900,
+    "trunk_space_liters": 630
+  },
+  {
     "make": "Tesla",
     "model": "Model Y",
     "range_km": 533,
