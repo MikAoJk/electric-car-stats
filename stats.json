@@ -13,6 +13,13 @@
     "price_nok": 489900,
     "trunk_space_liters": 540
   },
+   {
+    "make": "Exlantix",
+    "model": "ET",
+    "range_km": 500,
+    "price_nok": 599900,
+    "trunk_space_liters": 546
+  },
   {
     "make": "Hyundai",
     "model": "IONIQ 5",
