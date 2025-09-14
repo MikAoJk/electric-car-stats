@@ -63,6 +63,13 @@
     "trunk_space_liters": 600
   },
   {
+    "make": "Opel",
+    "model": "Astra Sports Tourer Electric",
+    "range_km": 524,
+    "price_nok": 438000,
+    "trunk_space_liters": 516
+  },
+  {
     "make": "Peugeot",
     "model": "E-3008",
     "range_km": 527,
