@@ -4,153 +4,175 @@
     "model": "Sealion 7",
     "range_km": 500,
     "price_nok": 469900,
-    "trunk_space_liters": 550
+    "trunk_space_liters": 550,
+    "country": "China"
   },
   {
     "make": "CUPRA",
     "model": "Tavascan",
     "range_km": 516,
     "price_nok": 489900,
-    "trunk_space_liters": 540
+    "trunk_space_liters": 540,
+    "country": "Spain"
   },
    {
     "make": "Exlantix",
     "model": "ET",
     "range_km": 500,
     "price_nok": 599900,
-    "trunk_space_liters": 546
+    "trunk_space_liters": 546,
+    "country": "China"
   },
   {
     "make": "Hyundai",
     "model": "IONIQ 5",
     "range_km": 570,
     "price_nok": 539800,
-    "trunk_space_liters": 531
+    "trunk_space_liters": 531,
+    "country": "South Korea"
   },
   {
     "make": "Kia",
     "model": "EV6",
     "range_km": 528,
     "price_nok": 449900,
-    "trunk_space_liters": 490
+    "trunk_space_liters": 490,
+    "country": "South Korea"
   },
   {
     "make": "MG",
     "model": "IM6",
     "range_km": 555,
     "price_nok": 489900,
-    "trunk_space_liters": 665
+    "trunk_space_liters": 665,
+    "country": "China"
   },
   {
     "make": "Mercedes",
     "model": "EQB 250+",
     "range_km": 530,
     "price_nok": 534517,
-    "trunk_space_liters": 495
+    "trunk_space_liters": 495,
+    "country": "Germany"
   },
   {
     "make": "Nissan",
     "model": "Ariya",
     "range_km": 533,
     "price_nok": 429900,
-    "trunk_space_liters": 466
+    "trunk_space_liters": 466,
+    "country": "Japan"
   },
   {
     "make": "Opel",
     "model": "Grandland",
     "range_km": 524,
     "price_nok": 438000,
-    "trunk_space_liters": 600
+    "trunk_space_liters": 600,
+    "country": "Germany"
   },
   {
     "make": "Opel",
     "model": "Astra Sports Tourer Electric",
     "range_km": 524,
     "price_nok": 438000,
-    "trunk_space_liters": 516
+    "trunk_space_liters": 516,
+    "country": "Germany"
   },
   {
     "make": "Peugeot",
     "model": "E-3008",
     "range_km": 527,
     "price_nok": 470000,
-    "trunk_space_liters": 520
+    "trunk_space_liters": 520,
+    "country": "France"
   },
   {
     "make": "Peugeot",
     "model": "E-5008",
     "range_km": 502,
     "price_nok": 540000,
-    "trunk_space_liters": 748
+    "trunk_space_liters": 748,
+    "country": "France"
   },
   {
     "make": "Polestar",
     "model": "4",
     "range_km": 530,
     "price_nok": 650000,
-    "trunk_space_liters": 526
+    "trunk_space_liters": 526,
+    "country": "Sweden"
   },
   {
     "make": "Renault",
     "model": "Scenic E-Tech Electric",
     "range_km": 622,
     "price_nok": 502075,
-    "trunk_space_liters": 545
+    "trunk_space_liters": 545,
+    "country": "France"
   },
   {
     "make": "Skoda",
     "model": "Enyaq",
     "range_km": 530,
     "price_nok": 417550,
-    "trunk_space_liters": 585
+    "trunk_space_liters": 585,
+    "country": "Czech Republic"
   },
   {
     "make": "Smart",
     "model": "#5",
     "range_km": 540,
     "price_nok": 499900,
-    "trunk_space_liters": 630
+    "trunk_space_liters": 630,
+    "country": "Germany"
   },
   {
     "make": "Tesla",
     "model": "Model Y",
     "range_km": 533,
     "price_nok": 525000,
-    "trunk_space_liters": 854
+    "trunk_space_liters": 854,
+    "country": "United States"
   },
   {
     "make": "Volkswagen",
     "model": "ID. Buzz",
     "range_km": 480,
     "price_nok": 545975,
-    "trunk_space_liters": 1121
+    "trunk_space_liters": 1121,
+    "country": "Germany"
   },
   {
     "make": "Volkswagen",
     "model": "ID.4",
     "range_km": 520,
     "price_nok": 437800,
-    "trunk_space_liters": 543
+    "trunk_space_liters": 543,
+    "country": "Germany"
   },
   {
     "make": "Volkswagen",
     "model": "ID.7 Tourer",
     "range_km": 579,
     "price_nok": 529000,
-    "trunk_space_liters": 605
+    "trunk_space_liters": 605,
+    "country": "Germany"
   },
   {
     "make": "Zeekr",
     "model": "7X",
     "range_km": 615,
     "price_nok": 589900,
-    "trunk_space_liters": 539
+    "trunk_space_liters": 539,
+    "country": "China"
   },
   {
     "make": "XPeng",
     "model": "G9",
     "range_km": 570,
     "price_nok": 549900,
-    "trunk_space_liters": 660
+    "trunk_space_liters": 660,
+    "country": "China"
   }
 ]

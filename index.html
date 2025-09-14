@@ -149,6 +149,40 @@
             border: 2px solid rgba(102, 126, 234, 0.2);
         }
         
+        .country-filter-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .country-select {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid rgba(102, 126, 234, 0.2);
+            border-radius: 12px;
+            background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            outline: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .country-select:hover {
+            border-color: rgba(102, 126, 234, 0.4);
+            background: linear-gradient(to right, #ffffff 0%, #f8f9fa 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+        
+        .country-select:focus {
+            border-color: #667eea;
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
         .no-results {
             text-align: center;
             padding: 48px 24px;
@@ -251,6 +285,12 @@
             color: #1a1a1a;
         }
         
+        .cars-table .country {
+            font-weight: 500;
+            color: #667eea;
+            font-style: italic;
+        }
+        
         .cars-table .range {
             color: #1565c0;
             font-weight: 600;
@@ -336,8 +376,17 @@
             </div>
         </div>
         
+        <div class="range-filter" id="countryFilter" style="display: none;">
+            <h3>Filter by Country</h3>
+            <div class="country-filter-container">
+                <select id="countrySelect" class="country-select">
+                    <option value="">All Countries</option>
+                </select>
+            </div>
+        </div>
+        
         <div id="noResults" class="no-results" style="display: none;">
-            No cars match the current filters. Try adjusting the minimum range or trunk space.
+            No cars match the current filters. Try adjusting the minimum range, trunk space, or country selection.
         </div>
         
         <div class="table-container" id="tableContainer" style="display: none;">
@@ -346,6 +395,7 @@
                     <tr>
                         <th>Brand</th>
                         <th>Model</th>
+                        <th>Country</th>
                         <th class="sortable" data-column="range">Range (km)</th>
                         <th class="sortable" data-column="price">Price (NOK)</th>
                         <th class="sortable" data-column="trunk_space">Trunk Space (L)</th>
@@ -453,11 +503,13 @@
         let rangeValue;
         let trunkSpaceSlider;
         let trunkSpaceValue;
+        let countrySelect;
         let tableContainer;
         let carsTableBody;
         let noResults;
         let rangeFilter;
         let trunkSpaceFilter;
+        let countryFilter;
         
         // Sorting variables
         let currentSortColumn = '';
@@ -471,6 +523,7 @@
             rowElement.innerHTML = `
                 <td class="brand-model">${car.make}</td>
                 <td class="brand-model">${car.model}</td>
+                <td class="country">${car.country}</td>
                 <td class="range">${formatNumber(car.range_km)}</td>
                 <td class="price">${formatCurrency(car.price_nok)}</td>
                 <td>${formatNumber(car.trunk_space_liters)}</td>
@@ -483,11 +536,14 @@
         function filterAndDisplayCars() {
             const minRange = parseInt(rangeSlider.value);
             const minTrunkSpace = parseInt(trunkSpaceSlider.value);
+            const selectedCountry = countrySelect.value;
+            
             let filteredCars = allCarData.filter(car => {
                 // Handle null values: include them only if filter is at minimum value
                 const rangeMatches = car.range_km === null ? minRange === parseInt(rangeSlider.min) : car.range_km >= minRange;
                 const trunkSpaceMatches = car.trunk_space_liters === null ? minTrunkSpace === parseInt(trunkSpaceSlider.min) : car.trunk_space_liters >= minTrunkSpace;
-                return rangeMatches && trunkSpaceMatches;
+                const countryMatches = selectedCountry === '' || car.country === selectedCountry;
+                return rangeMatches && trunkSpaceMatches && countryMatches;
             });
             
             // Apply sorting if a column is selected
@@ -516,6 +572,29 @@
                 noResults.style.display = 'none';
                 tableContainer.style.display = 'block';
             }
+        }
+
+        // Function to initialize the country filter
+        function initializeCountryFilter() {
+            // Get unique countries and sort them
+            const countries = [...new Set(allCarData.map(car => car.country))].sort();
+            
+            // Clear existing options (except "All Countries")
+            countrySelect.innerHTML = '<option value="">All Countries</option>';
+            
+            // Add country options
+            countries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country;
+                option.textContent = country;
+                countrySelect.appendChild(option);
+            });
+            
+            // Add event listener for changes
+            countrySelect.addEventListener('change', filterAndDisplayCars);
+            
+            // Show the country filter
+            countryFilter.style.display = 'block';
         }
 
         // Function to initialize the trunk space slider
@@ -577,6 +656,8 @@
             trunkSpaceFilter = document.getElementById('trunkSpaceFilter');
             trunkSpaceSlider = document.getElementById('trunkSpaceSlider');
             trunkSpaceValue = document.getElementById('trunkSpaceValue');
+            countryFilter = document.getElementById('countryFilter');
+            countrySelect = document.getElementById('countrySelect');
 
             try {
                 // Fetch the stats.json file
@@ -588,9 +669,10 @@
                 
                 allCarData = await response.json();
                 
-                // Initialize both sliders and display cars
+                // Initialize all filters and display cars
                 initializeRangeSlider();
                 initializeTrunkSpaceSlider();
+                initializeCountryFilter();
                 
                 // Add click event listeners to sortable headers
                 document.querySelectorAll('.cars-table th.sortable').forEach(th => {
