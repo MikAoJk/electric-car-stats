@@ -126,6 +126,13 @@
     "trunk_space_liters": 543
   },
   {
+    "make": "Volkswagen",
+    "model": "ID.7 Tourer",
+    "range_km": 579,
+    "price_nok": 529000,
+    "trunk_space_liters": 605
+  },
+  {
     "make": "Zeekr",
     "model": "7X",
     "range_km": 615,
