@@ -56,14 +56,6 @@
     "country": "Germany"
   },
   {
-    "make": "Nissan",
-    "model": "Ariya",
-    "range_km": 533,
-    "price_nok": 429900,
-    "trunk_space_liters": 466,
-    "country": "Japan"
-  },
-  {
     "make": "Opel",
     "model": "Grandland",
     "range_km": 524,
@@ -94,14 +86,6 @@
     "price_nok": 540000,
     "trunk_space_liters": 748,
     "country": "France"
-  },
-  {
-    "make": "Polestar",
-    "model": "4",
-    "range_km": 530,
-    "price_nok": 650000,
-    "trunk_space_liters": 526,
-    "country": "Sweden"
   },
   {
     "make": "Renault",
