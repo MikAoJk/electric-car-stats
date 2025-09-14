@@ -113,10 +113,18 @@
   },
   {
     "make": "Tesla",
+    "model": "Model 3",
+    "range_km": 702,
+    "price_nok": 427654,
+    "trunk_space_liters": 595,
+    "country": "United States"
+  },
+  {
+    "make": "Tesla",
     "model": "Model Y",
-    "range_km": 533,
+    "range_km": 622,
     "price_nok": 525000,
-    "trunk_space_liters": 854,
+    "trunk_space_liters": 822,
     "country": "United States"
   },
   {
