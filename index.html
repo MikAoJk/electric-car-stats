@@ -151,36 +151,100 @@
         
         .country-filter-container {
             display: flex;
-            align-items: center;
-            gap: 20px;
+            flex-direction: column;
+            gap: 16px;
         }
         
-        .country-select {
-            flex: 1;
-            padding: 12px 20px;
+        .country-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 8px;
             border: 2px solid rgba(102, 126, 234, 0.2);
             border-radius: 12px;
             background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #1a1a1a;
-            outline: none;
-            transition: all 0.3s ease;
+        }
+        
+        .country-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
             cursor: pointer;
+            font-size: 0.95rem;
         }
         
-        .country-select:hover {
-            border-color: rgba(102, 126, 234, 0.4);
-            background: linear-gradient(to right, #ffffff 0%, #f8f9fa 100%);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        .country-option:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateX(2px);
         }
         
-        .country-select:focus {
+        .country-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .country-checkbox.checked {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-color: #667eea;
-            background: #ffffff;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .country-checkbox.checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .country-label {
+            font-weight: 500;
+            color: #1a1a1a;
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .selected-countries {
+            margin-top: 8px;
+            padding: 8px 12px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #667eea;
+            min-height: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .clear-all-btn {
+            padding: 6px 12px;
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 6px;
+            color: #667eea;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            align-self: flex-start;
+        }
+        
+        .clear-all-btn:hover {
+            background: rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.5);
         }
         
         .no-results {
@@ -379,9 +443,11 @@
         <div class="range-filter" id="countryFilter" style="display: none;">
             <h3>Filter by Country</h3>
             <div class="country-filter-container">
-                <select id="countrySelect" class="country-select">
-                    <option value="">All Countries</option>
-                </select>
+                <div class="country-options" id="countryOptions">
+                    <!-- Country checkboxes will be inserted here -->
+                </div>
+                <div class="selected-countries" id="selectedCountries">All countries selected</div>
+                <button class="clear-all-btn" id="clearAllBtn" onclick="clearAllCountries()">Clear All</button>
             </div>
         </div>
         
@@ -502,7 +568,8 @@
         let rangeValue;
         let trunkSpaceSlider;
         let trunkSpaceValue;
-        let countrySelect;
+        let countryOptions;
+        let selectedCountries = new Set(); // Track selected countries
         let tableContainer;
         let carsTableBody;
         let noResults;
@@ -534,13 +601,12 @@
         function filterAndDisplayCars() {
             const minRange = parseInt(rangeSlider.value);
             const minTrunkSpace = parseInt(trunkSpaceSlider.value);
-            const selectedCountry = countrySelect.value;
             
             let filteredCars = allCarData.filter(car => {
                 // Handle null values: include them only if filter is at minimum value
                 const rangeMatches = car.range_km === null ? minRange === parseInt(rangeSlider.min) : car.range_km >= minRange;
                 const trunkSpaceMatches = car.trunk_space_liters === null ? minTrunkSpace === parseInt(trunkSpaceSlider.min) : car.trunk_space_liters >= minTrunkSpace;
-                const countryMatches = selectedCountry === '' || car.country === selectedCountry;
+                const countryMatches = selectedCountries.size === 0 || selectedCountries.has(car.country);
                 return rangeMatches && trunkSpaceMatches && countryMatches;
             });
             
@@ -572,24 +638,73 @@
             }
         }
 
+        // Function to update selected countries display
+        function updateSelectedCountriesDisplay() {
+            const selectedCountriesDiv = document.getElementById('selectedCountries');
+            if (selectedCountries.size === 0) {
+                selectedCountriesDiv.textContent = 'All countries selected';
+            } else {
+                const countriesList = Array.from(selectedCountries).sort().join(', ');
+                selectedCountriesDiv.textContent = `Selected: ${countriesList}`;
+            }
+        }
+
+        // Function to toggle country selection
+        function toggleCountry(country) {
+            if (selectedCountries.has(country)) {
+                selectedCountries.delete(country);
+            } else {
+                selectedCountries.add(country);
+            }
+            
+            // Update checkbox visual state
+            const checkbox = document.querySelector(`[data-country="${country}"] .country-checkbox`);
+            if (checkbox) {
+                checkbox.classList.toggle('checked', selectedCountries.has(country));
+            }
+            
+            updateSelectedCountriesDisplay();
+            filterAndDisplayCars();
+        }
+
+        // Function to clear all country selections
+        function clearAllCountries() {
+            selectedCountries.clear();
+            
+            // Update all checkboxes
+            document.querySelectorAll('.country-checkbox').forEach(checkbox => {
+                checkbox.classList.remove('checked');
+            });
+            
+            updateSelectedCountriesDisplay();
+            filterAndDisplayCars();
+        }
+
         // Function to initialize the country filter
         function initializeCountryFilter() {
             // Get unique countries and sort them
             const countries = [...new Set(allCarData.map(car => car.country))].sort();
             
-            // Clear existing options (except "All Countries")
-            countrySelect.innerHTML = '<option value="">All Countries</option>';
+            // Clear existing options
+            countryOptions.innerHTML = '';
             
             // Add country options
             countries.forEach(country => {
-                const option = document.createElement('option');
-                option.value = country;
-                option.textContent = country;
-                countrySelect.appendChild(option);
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'country-option';
+                optionDiv.setAttribute('data-country', country);
+                optionDiv.onclick = () => toggleCountry(country);
+                
+                optionDiv.innerHTML = `
+                    <div class="country-checkbox"></div>
+                    <div class="country-label">${country}</div>
+                `;
+                
+                countryOptions.appendChild(optionDiv);
             });
             
-            // Add event listener for changes
-            countrySelect.addEventListener('change', filterAndDisplayCars);
+            // Initialize display
+            updateSelectedCountriesDisplay();
             
             // Show the country filter
             countryFilter.style.display = 'block';
@@ -655,7 +770,7 @@
             trunkSpaceSlider = document.getElementById('trunkSpaceSlider');
             trunkSpaceValue = document.getElementById('trunkSpaceValue');
             countryFilter = document.getElementById('countryFilter');
-            countrySelect = document.getElementById('countrySelect');
+            countryOptions = document.getElementById('countryOptions');
 
             try {
                 // Fetch the stats.json file
