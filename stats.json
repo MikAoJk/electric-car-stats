@@ -112,6 +112,14 @@
     "country": "Germany"
   },
   {
+    "make": "Polestar",
+    "model": "4",
+    "range_km": 620,
+    "price_nok": 549900,
+    "trunk_space_liters": 526,
+    "country": "Sweden"
+  },
+  {
     "make": "Tesla",
     "model": "Model 3",
     "range_km": 702,
